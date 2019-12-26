@@ -31,7 +31,7 @@ Please see the [License](LICENSE.txt) for more details.
 ## Useful features
 
 * Designed to be easy to update with no loss of configuration of settings.
-* Built on top of a full base Cygwin installation with `apy-cyg` provided to install new programs when needed.
+* Built on top of a full base Cygwin installation with `apt-cyg` provided to install new programs when needed.
 * `noacl` (file permissions) and `sparse` files (large files) enabled by default.
 * Scripted post processing for `mirror`,`pget` and `lftpsync` custom commands available using extensions.
 * Downloads can be queued from multiple open sessions across open sites using all supported protocols - sftp - ftp with ssl/tls - plain ftp.
