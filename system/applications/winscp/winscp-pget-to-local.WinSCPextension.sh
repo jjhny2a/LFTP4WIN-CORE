@@ -1,3 +1,20 @@
+# @name pget-to-local
+# @command cmd /c start "" %TERMINAL% "%EXTENSION_PATH%" "!U" "!@" "!#" "!S" "!/!" "!\" "%skipqueue%
+# @side Local
+# @flag RemoteFiles
+# @description LFTP pget selected remote file to local window.
+# @author userdocs
+# @version 1.0
+# @homepage https://github.com/userdocs/LFTP4WIN-CORE
+#
+# @option - -config group "Terminal Settings"
+#
+# @option TERMINAL -config checkbox "Use ConEMU instead of MinTTY" """%WINSCP_PATH%\..\..\bin\mintty.exe"" --Title LFTP4WIN -e /bin/bash -li" """%WINSCP_PATH%\..\conemu\ConEmu64.exe"" -run {Bash::bash}" """%WINSCP_PATH%\..\..\bin\mintty.exe"" --Title LFTP4WIN -e /bin/bash -li"
+#
+# @option - -config group "Settings"
+#
+# @option skipqueue -config checkbox "Skip queue confirmation" "" "skipqueue"
+#
 #! /usr/bin/env bash
 #
 # Credits: A heavily modified version of this idea and script http://www.torrent-invites.com/showthread.php?t=132965 towards a simplified end user experience.
@@ -7,7 +24,7 @@
 #
 source "/scripts/lftp-conf-override.sh"
 #
-winscp_to_bash "$1" "$2" "$3" "$4" "$5" "$6" "$7"
+winscp_to_bash "$1" "$2" "$3" "$4" "$5" "$6"
 #
 openssh_known_hosts "$port" "$hostname"
 #
@@ -24,14 +41,14 @@ if [[ -f "$lock_file" ]]
 then
 	echo "An lftp job is already running already."
 	echo
-    if [[ "$8" = 'skipqueue' ]]; then
+    if [[ "$7" = 'skipqueue' ]]; then
         queuestatus='y'
     else
         read -ep "Do you want to queue this download, enter [y] to queue or [n] to skip: " -i "y" queuestatus
         echo
     fi
 	if [[ "$queuestatus" =~ ^[Yy]$ ]]; then
-		echo "lftp -p '$port' -u '$username,$queued_password' '$protocol://$hostname' -e 'set pget:default-n \"$pget_default_n\"; pget $pget_args \"$queued_remote_dir\" -o \"$queued_local_dir\"; quit'; local_dir=\"$queued_local_dir\"; remote_dir=\"$queued_remote_dir\"; source \"$HOME/extensions/pget-to-local.sh\"" >> "/scripts/queue/jobs.sh"
+		echo "lftp -p '$port' -u '$username','$password_hardcode' '$protocol://$hostname' -e 'set pget:default-n \"$pget_default_n\"; pget $pget_args \"$remote_dir_hardcode\" -o \"$local_dir_hardcode\"; quit'; local_dir='$local_dir_hardcode'; remote_dir='$remote_dir_hardcode'; source '$HOME/extensions/pget-to-local.sh'" >> "/scripts/queue/jobs.sh"
 		echo 'This download has been queued. Use the Winscp Command "Queued Jobs" to view the queued jobs.'
 		sleep 2
 	fi

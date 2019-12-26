@@ -1,8 +1,8 @@
-# @name lftp
+# @name Terminal
 # @command cmd /c start "" %TERMINAL% "%EXTENSION_PATH%" "!U" "!@" "!#" "!S" "!/" "!\"
 # @side Local
 # @flag
-# @description Connect to the remote server using LFTP
+# @description Start a terminal session in the home directory. Default is MinTTy. You can select ConEMU from the custom command preferences.
 # @author userdocs
 # @version 1.0
 # @homepage https://github.com/userdocs/LFTP4WIN-CORE
@@ -19,6 +19,8 @@ openssh_known_hosts "$port" "$hostname"
 #
 cd "$local_dir"
 #
-lftp -p "$port" -u "$username,$password" "$protocol://$hostname" -e "cd \"$remote_dir\"; cls -1aB"
+export set CHERE_INVOKING=1
+#
+bash -li
 #
 exit

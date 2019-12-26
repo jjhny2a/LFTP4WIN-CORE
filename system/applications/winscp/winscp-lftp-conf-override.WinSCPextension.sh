@@ -1,11 +1,15 @@
 # @name lftp-conf-override
-# @command cmd /c start "" "%WINSCP_PATH%\..\conemu\ConEmu64.exe" -run {Bash::bash} "%EXTENSION_PATH%" "%parguments%" "%pget%" "%marguments%" "%mparallel%" "%mpget%" "%reset%" "%openlftpconfoverride%"
+# @command cmd /c start "" %TERMINAL% "%EXTENSION_PATH%" "%parguments%" "%pget%" "%marguments%" "%mparallel%" "%mpget%" "%reset%" "%openlftpconfoverride%"
 # @side Local
 # @flag
 # @description Use this command to change some specific transfer settings that will override the lftp conf settings while not reset to the defaults.
 # @author userdocs
 # @version 1.0
 # @homepage https://github.com/userdocs/LFTP4WIN-CORE
+#
+# @option - -config group "Terminal Settings"
+#
+# @option TERMINAL -config checkbox "Use ConEMU instead of MinTTY" """%WINSCP_PATH%\..\..\bin\mintty.exe"" --Title LFTP4WIN -e /bin/bash -li" """%WINSCP_PATH%\..\conemu\ConEmu64.exe"" -run {Bash::bash}" """%WINSCP_PATH%\..\..\bin\mintty.exe"" --Title LFTP4WIN -e /bin/bash -li"
 #
 # @option reset -run checkbox "Reset values to disable all overrides" "" "reset"
 # @option openlftpconfoverride -run checkbox "open the lftp-conf-override script with notepad++" "" "openlftpconfoverride"

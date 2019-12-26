@@ -1,11 +1,15 @@
 # @name notifications
-# @command cmd /c start "" "%WINSCP_PATH%\..\conemu\ConEmu64.exe" -run {Bash::bash} "%EXTENSION_PATH%" "%pushoverkey%" "%pushovertoken%" "%pushbullet%" "%reset%" "%openotifications%"
+# @command cmd /c start "" %TERMINAL% "%EXTENSION_PATH%" "%pushoverkey%" "%pushovertoken%" "%pushbullet%" "%reset%" "%openotifications%"
 # @side Local
 # @flag
 # @description Use this command to enter your API keys and tokens for push notifications
 # @author userdocs
 # @version 1.0
 # @homepage https://github.com/userdocs/LFTP4WIN-CORE
+#
+# @option - -config group "Terminal Settings"
+#
+# @option TERMINAL -config checkbox "Use ConEMU instead of MinTTY" """%WINSCP_PATH%\..\..\bin\mintty.exe"" --Title LFTP4WIN -e /bin/bash -li" """%WINSCP_PATH%\..\conemu\ConEmu64.exe"" -run {Bash::bash}" """%WINSCP_PATH%\..\..\bin\mintty.exe"" --Title LFTP4WIN -e /bin/bash -li"
 #
 # @option reset -run checkbox "Reset the notifications settings file" "" "reset"
 # @option openotifications -run checkbox "Open the notifications settings file with notepad++" "" "openotifications"
