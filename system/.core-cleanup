@@ -14,5 +14,7 @@ rm -f "/setup-x86_64.exe"
 rm -f "/applications/winscp/winscp-conemu.WinSCPextension.sh"
 rm -f "/applications/winscp/winscp-mirror-to-local.WinSCPextension"
 rm -f "/applications/winscp/winscp-pget-to-local.WinSCPextension"
+#
 rm -f "/scripts/lftp-winscp-mirror.sh"
 rm -f "/scripts/lftp-winscp-pget.sh"
+rm -f "/scripts/install.iperf.sh"
