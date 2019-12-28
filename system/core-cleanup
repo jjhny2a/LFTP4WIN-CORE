@@ -1,0 +1,18 @@
+rm -f 'LFTP4WIN-conemu.cmd'
+rm -f '.gitattributes'
+rm -f 'LICENSE.txt'
+rm -f 'README.md'
+#
+rm -f "$(PWD)/system/initialize.sh"
+rm -f "$(PWD)/system/Cygwin.bat"
+rm -f "$(PWD)/system/Cygwin.bat.disabled"
+rm -f "$(PWD)/system/Cygwin.ico"
+rm -f "$(PWD)/system/Cygwin-Terminal.ico"
+rm -f "$(PWD)/system/setup-x86.exe"
+rm -f "$(PWD)/system/setup-x86_64.exe"
+#
+rm -f "$(PWD)/system/applications/winscp/winscp-conemu.WinSCPextension.sh"
+rm -f "$(PWD)/system/applications/winscp/winscp-mirror-to-local.WinSCPextension"
+rm -f "$(PWD)/system/applications/winscp/winscp-pget-to-local.WinSCPextension"
+rm -f "$(PWD)/system/scripts/lftp-winscp-mirror.sh"
+rm -f "$(PWD)/system/scripts/lftp-winscp-pget.sh"
