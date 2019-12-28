@@ -1,5 +1,5 @@
 # @name OpenSSH
-# @command cmd /c start "" %TERMINAL% "%EXTENSION_PATH%" "!U" "!@" "!#" "!S" "!/" "!\" "%DYNAMIC%" "%REMOTECD%"
+# @command cmd /c start "" %TERMINAL% "%EXTENSION_PATH%" "!U" "!@" "!#" "!S" "!/" "!\" "%DYNAMIC%" "%CDREMOTE%"
 # @flag
 # @description Connect Using Openssh - with password or keyfile
 # @author userdocs
@@ -12,7 +12,7 @@
 #
 # @option - -config group "Convenience Settings"
 #
-# @option REMOTECD -config checkbox "Automatically CD to remote directory" "no" "yes" "no"
+# @option CDREMOTE -config checkbox "Automatically CD to remote directory" "no" "yes" "no"
 #
 # @option - -config group "Port Forwarding Settings"
 #
@@ -29,7 +29,7 @@ export SSHPASS="$password"
 cd "$local_dir"
 #
 [[ -n "$7" ]] && DYNAMIC="-D $7" || DYNAMIC=""
-[[ -n "$8" && "$8" = 'yes' ]] && CDREMOTE="cd '$remote_dir'; bash -li" || :
+[[ -n "$8" && "$8" = 'yes' ]] && CDREMOTE="cd '$remote_dir'; bash -li" || CDREMOTE=""
 #
 sshpass -e ssh -qt "$DYNAMIC" -p "$port" "$username@$hostname" "$CDREMOTE"
 #
