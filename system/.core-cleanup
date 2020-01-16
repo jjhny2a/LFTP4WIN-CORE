@@ -1,7 +1,7 @@
-rm -f 'LFTP4WIN-conemu.cmd'
-rm -f '.gitattributes'
-rm -f 'LICENSE.txt'
-rm -f 'README.md'
+rm -f '../LFTP4WIN-conemu.cmd'
+rm -f '../.gitattributes'
+rm -f '../LICENSE.txt'
+rm -f '../README.md'
 #
 rm -f "/initialize.sh"
 rm -f "/Cygwin.bat"
