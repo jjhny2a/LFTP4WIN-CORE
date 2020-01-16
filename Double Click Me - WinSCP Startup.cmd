@@ -24,7 +24,7 @@ set SHELL=/bin/bash
 
 IF EXIST "%LFTP4WIN_ROOT%\etc\fstab" "%LFTP4WIN_ROOT%\bin\sed" -i 's/\r$//' "%LFTP4WIN_ROOT%\etc\fstab"
 
-IF EXIST "%LFTP4WIN_ROOT%\portable-init.sh" "%LFTP4WIN_ROOT%\bin\bash" "%LFTP4WIN_ROOT%\portable-init.sh"
+IF EXIST "%LFTP4WIN_ROOT%\portable-init.sh" "%LFTP4WIN_ROOT%\bin\bash" -li "%LFTP4WIN_ROOT%\portable-init.sh"
 
 set LIST=
 for %%x in ("%LFTP4WIN_BASE%keys\*.ppk") do set LIST=!LIST! "%%x"
