@@ -8,7 +8,7 @@
 #
 # @option - -config group "Terminal Settings"
 #
-# @option TERMINAL -config checkbox "Use ConEMU instead of MinTTY" """%WINSCP_PATH%\..\..\bin\mintty.exe"" --Title LFTP4WIN -e /bin/bash -li" """%WINSCP_PATH%\..\conemu\ConEmu64.exe"" -run {Bash::bash}" """%WINSCP_PATH%\..\..\bin\mintty.exe"" --Title LFTP4WIN -e /bin/bash -li"
+# @option TERMINAL -config checkbox "Use ConEMU instead of MinTTY" """%WINSCP_PATH%\..\..\bin\mintty.exe"" --Title ""%TITLE%"" -e /bin/bash -li" """%WINSCP_PATH%\..\conemu\ConEmu64.exe"" -run {Bash::bash}" """%WINSCP_PATH%\..\..\bin\mintty.exe"" --Title ""%TITLE%"" -e /bin/bash -li"
 #
 # @option - -config group "Convenience Settings"
 #
@@ -17,6 +17,8 @@
 # @option - -config group "Port Forwarding Settings"
 #
 # @option DYNAMIC -config textbox "Enter your Dynamic ssh port here" ""
+#
+# @option TITLE -run textbox "Windows title!" "!N"
 #
 #! /usr/bin/env bash
 #
