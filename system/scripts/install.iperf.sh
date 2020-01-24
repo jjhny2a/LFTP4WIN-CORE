@@ -6,16 +6,13 @@ mkdir -p ~/{bin,lib} && source ~/.bashrc
 #
 if [[ $(echo "$PATH" | grep -oc "$HOME/bin") -eq "0" && $(cat ~/.bashrc | grep -oc 'export PATH="$HOME/bin${PATH:+:${PATH}}"') -eq "0" ]]; then
 	export PATH="$HOME/bin:$PATH${PATH:+:${PATH}}"
-	echo 'export PATH="$HOME/bin${PATH:+:${PATH}}"' >> ~/.bashrc
 fi
 #
 if [[ $(echo "$LD_LIBRARY_PATH" | grep -oc "$HOME/lib") -eq "0" && $(cat ~/.bashrc | grep -oc 'export LD_LIBRARY_PATH="$HOME/lib${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}"') -eq "0" ]]; then
 	export LD_LIBRARY_PATH="$HOME/lib${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}"
-	echo 'export LD_LIBRARY_PATH="$HOME/lib${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}"' >> ~/.bashrc
 fi
 #
-wget -q4O ~/bin/iperf3 https://iperf.fr/download/ubuntu/iperf3_3.1.3 && chmod +x ~/bin/iperf3
-wget -q4O ~/lib/libiperf.so.0 https://iperf.fr/download/ubuntu/libiperf.so.0_3.1.3
+wget -q4O ~/bin/iperf3 https://github.com/userdocs/iperf3-static/raw/master/bin/iperf3 && chmod +x ~/bin/iperf3
 #
 if [[ -z "$IPERF3PORT" ]]; then
     IPERF3PORT="$(shuf -i 10001-32001 -n 1)" && while [[ "$(ss -ln | grep -co ''"$IPERF3PORT"'')" -ge "1" ]]; do IPERF3PORT="$(shuf -i 10001-32001 -n 1)"; done
