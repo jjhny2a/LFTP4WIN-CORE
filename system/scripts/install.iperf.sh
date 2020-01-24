@@ -2,7 +2,7 @@
 #
 # bash <(curl -4sL https://git.io/fjRIi)
 #
-mkdir -p ~/{bin,lib} && source ~/.bashrc
+mkdir -p ~/bin && source ~/.bashrc
 #
 if [[ $(echo "$PATH" | grep -oc "$HOME/bin") -eq "0" && $(cat ~/.bashrc | grep -oc 'export PATH="$HOME/bin${PATH:+:${PATH}}"') -eq "0" ]]; then
 	export PATH="$HOME/bin:$PATH${PATH:+:${PATH}}"
