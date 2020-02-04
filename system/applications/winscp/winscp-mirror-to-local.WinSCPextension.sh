@@ -41,12 +41,12 @@ if [[ -f "$lock_file" ]]
 then
 	echo "An lftp job is already running already."
 	echo
-    if [[ "$7" = 'skipqueue' ]]; then
-        queuestatus='y'
-    else
-        read -ep "Do you want to queue this download, enter [y] to queue or [n] to skip: " -i "y" queuestatus
-        echo
-    fi
+	if [[ "$7" = 'skipqueue' ]]; then
+		queuestatus='y'
+	else
+		read -ep "Do you want to queue this download, enter [y] to queue or [n] to skip: " -i "y" queuestatus
+		echo
+	fi
 	if [[ "$queuestatus" =~ ^[Yy]$ ]]; then
 		echo "lftp -p '$port' -u '$username','$password_hardcode' '$protocol://$hostname' -e 'set mirror:parallel-transfer-count \"$mirror_parallel_transfer_count\"; set mirror:use-pget-n \"$mirror_use_pget_n\"; mirror $mirror_args \"$remote_dir_hardcode\" \"$local_dir_hardcode\"; quit'; local_dir='$local_dir_hardcode'; remote_dir='$remote_dir_hardcode'; source '$HOME/extensions/mirror-to-local.sh'" >> "/scripts/queue/jobs.sh"
 		echo 'This download has been queued. Use the Winscp Command "Queued Jobs" to view the queued jobs.'

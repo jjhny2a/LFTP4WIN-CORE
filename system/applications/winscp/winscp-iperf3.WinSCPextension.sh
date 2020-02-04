@@ -21,11 +21,11 @@ openssh_known_hosts "$port" "$hostname"
 export SSHPASS="$password"
 #
 if [[ -n "$(echo "$8" | grep -o 'ConEmu64.exe')" ]]; then
-    /applications/conemu/ConEmu64.exe -run {Bash::bash} -c "sshpass -f '/tmp/.password' ssh -qt -p '$port' '$username@$hostname' 'export IPERF3PORT=$7 && bash -li <(curl -4sL https://git.io/fjRIi)'" -new_console:s &
+	/applications/conemu/ConEmu64.exe -run {Bash::bash} -c "sshpass -f '/tmp/.password' ssh -qt -p '$port' '$username@$hostname' 'export IPERF3PORT=$7 && bash -li <(curl -4sL https://git.io/fjRIi)'" -new_console:s &
 fi
 #
 if [[ -n "$(echo "$8" | grep -o 'mintty.exe')" ]]; then
-    /bin/mintty.exe --title 'Iperf3 Remote' -e /bin/bash -lic "sshpass -e ssh -qt -p '$port' '$username@$hostname' 'export IPERF3PORT=$7 && bash -li <(curl -4sL https://git.io/fjRIi)'" &
+	/bin/mintty.exe --title 'Iperf3 Remote' -e /bin/bash -lic "sshpass -e ssh -qt -p '$port' '$username@$hostname' 'export IPERF3PORT=$7 && bash -li <(curl -4sL https://git.io/fjRIi)'" &
 fi
 #
 sleep 5
@@ -60,6 +60,6 @@ echo | tee -a "$HOME/../help/reports/report-$hostname.txt"
 read -ep "Are you ready to close the terminals?: " -i "y" quitme
 #
 if [[ "$quitme" =~ ^[Yy]$ ]]; then
-    exit
+	exit
 fi
 #
