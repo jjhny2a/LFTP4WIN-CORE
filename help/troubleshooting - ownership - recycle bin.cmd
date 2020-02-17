@@ -1,2 +1,2 @@
-cd C:\$Recycle.Bin
-takeown /f "%cd%" /r & icacls "%cd%" /reset /t /c /q
+PUSHD C:\$Recycle.Bin
+takeown /f "%CD%" /r & icacls "%CD%" /reset /t /c /q

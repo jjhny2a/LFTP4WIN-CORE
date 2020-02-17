@@ -1,5 +1,5 @@
 # @name Terminal
-# @command cmd /c start "" %TERMINAL% "%EXTENSION_PATH%" "!U" "!@" "!#" "!S" "!/" "!\" "%LOCALCD%"
+# @command cmd /c start "" %TERMINAL% "%EXTENSION_PATH%" "!U" "!@" "!#" "!S" "!/" "!\" "%CDLOCAL%"
 # @side Local
 # @flag
 # @description Start a terminal session in the home directory. Default is MinTTy. You can select ConEMU from the custom command preferences.
@@ -9,11 +9,13 @@
 #
 # @option - -config group "Terminal Settings"
 #
-# @option TERMINAL -config checkbox "Use ConEMU instead of MinTTY" """%WINSCP_PATH%\..\..\bin\mintty.exe"" --Title LFTP4WIN -e /bin/bash -li" """%WINSCP_PATH%\..\conemu\ConEmu64.exe"" -run {Bash::bash}" """%WINSCP_PATH%\..\..\bin\mintty.exe"" --Title LFTP4WIN -e /bin/bash -li"
+# @option TERMINAL -config checkbox "Use ConEMU instead of MinTTY" """%WINSCP_PATH%\..\..\bin\mintty.exe"" --Title ""%TITLE%"" -e /bin/bash -li" """%WINSCP_PATH%\..\conemu\ConEmu64.exe"" -title LFTP4WIN -run {Bash::bash} -new_console:t:""%TITLE%""" """%WINSCP_PATH%\..\..\bin\mintty.exe"" --Title ""%TITLE%"" -e /bin/bash -li"
 #
 # @option - -config group "Convenience Settings"
 #
-# @option LOCALCD -config checkbox "Automatically CD to remote directory" "no" "yes" "no"
+# @option CDLOCAL -config checkbox "Automatically CD to local directory" "no" "yes" "no"
+#
+# @option TITLE -run textbox "Windows title!" "!\"
 #
 #! /usr/bin/env bash
 #
