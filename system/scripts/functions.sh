@@ -73,10 +73,10 @@ function winscp_to_bash {
 	[[ -n "$4" && "$(basename "$0")" = 'winscp-lftp.WinSCPextension.sh' ]] && echo "session = $4" >> "$HOME/lftpvar.txt" || :
 	#
 	# Check is the session URL contains a password. If the result is empty then do nothing.
-	if [[ -n "$(echo "$4" | cut -f3 -d":" | cut -f1 -d";")" ]]; then
+	if [[ -n "$(echo "$4" | cut -f3 -d":" | cut -f1 -d";" | cut -f1 -d"@")" ]]; then
 		#
 		# Get the URL encoded password string from the session URL and convert this to its un-encoded form to use with openssh and lftp to avoid special character issues.
-		password="$(echo -e $(echo $(echo "$4" | cut -f3 -d":" | cut -f1 -d";") | sed 's/%/\\x/g'))" && [[ "$(basename "$0")" = 'winscp-lftp.WinSCPextension.sh' ]] && echo "password = $password" >> "$HOME/lftpvar.txt" || :
+		password="$(echo -e $(echo $(echo "$4" | cut -f3 -d":" | cut -f1 -d";" | cut -f1 -d"@") | sed 's/%/\\x/g'))" && [[ "$(basename "$0")" = 'winscp-lftp.WinSCPextension.sh' ]] && echo "password = $password" >> "$HOME/lftpvar.txt" || :
 		#
 		# Echo the password to a text file to use with sshpass if the environment variable is not usable when ConEMU is laoded.
 		[[ "$(basename "$0")" = 'winscp-iperf3.WinSCPextension.sh' ]] && echo "$password" > "/tmp/.password"
