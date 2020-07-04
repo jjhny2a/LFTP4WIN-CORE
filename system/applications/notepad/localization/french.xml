@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <NotepadPlus>
-    <Native-Langue name="Français" filename="french.xml" version="7.8.6">
+    <Native-Langue name="Français" filename="french.xml" version="7.8.7">
         <Menu>
             <Main>
                 <!-- Main Menu Entries -->
@@ -765,7 +765,7 @@ Vous pouvez définir plusieurs marqueurs de colonne en utilisant un espace pour 
                     <Item id="6413" name="Dossier par défaut (ouvrir/enregistrer)"/>
                     <Item id="6414" name="Utiliser celui du document actuel"/>
                     <Item id="6415" name="Mémoriser le dernier dossier utilisé"/>
-                    <Item id="6430" name="Activer le nouveau style de dialogue (sans l'extension de fichier &amp; le style du chemin d'Unix supporté)"/>
+                    <Item id="6430" name="Activer le nouveau style de dialogue (sans le style du chemin d'Unix supporté)"/>
                     <Item id="6431" name="Lors de glisser-déposer d'un dossier, ouvrir tous les fichiers dans le dossier"/>
                 </DefaultDir>
 
@@ -930,6 +930,7 @@ Vous pouvez définir plusieurs marqueurs de colonne en utilisant un espace pour 
                     <Item id="6331" name="Afficher seulement le nom du fichier dans la barre de titre"/>
                     <Item id="6334" name="Détecter l'encodage automatiquement"/>
                     <Item id="6314" name="Activer la police à espacement fixe dans la boîte de dialogue Rechercher (Nécessité de redémarrage)"/>
+                    <Item id="6349" name="Utiliser &quot;DirectWrite&quot; (il pourrait améliorer le rendu des caractères spéciaux. Nécessité de redémarrage)"/>
                     <Item id="6337" name="Ext. fichier espace de travail :"/>
                     <Item id="6344" name="Aperçu du document"/>
                     <Item id="6345" name="Aperçu à onglet"/>
@@ -1242,6 +1243,17 @@ Rechercher dans tous les fichiers sauf exe, obj &amp;&amp; log:
             <summary-nbsel1 value=" caractères sélectionnés ("/>
             <summary-nbsel2 value=" octets) dans "/>
             <summary-nbrange value=" sélections"/>
+            <replace-in-files-confirm-title value="Confirmation"/>
+            <replace-in-files-confirm-directory value="Voulez-vous remplacer toutes les occurrences dans :"/>
+            <replace-in-files-confirm-filetype value="Pour le(s) type(s) de fichier :"/>
+            <replace-in-open-docs-confirm-title value="Confirmation"/>
+            <replace-in-open-docs-confirm-message value="Voulez-vous vraiment remplacer toutes les occurrences dans tous les documents ouverts ?"/>
+            <find-result-caption value="Résultats de recherche"/>
+            <find-result-title value="Rechercher"/>
+            <find-result-title-info value="($INT_REPLACE1$ résultats dans $INT_REPLACE2$ documents depuis $INT_REPLACE3$ documents recherchés)"/>
+            <find-result-title-info-extra value=" - Mode de filtre de ligne : affiche uniquement les résultats filtrés"/>
+            <find-result-hits value="($INT_REPLACE$ résultats)"/>
+            <find-regex-zero-length-match value="la chaîne vide trouvée" />
         </MiscStrings>
     </Native-Langue>
 </NotepadPlus>

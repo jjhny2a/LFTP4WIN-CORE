@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!-- Russian translation for Notepad++
-Updated to v7.8.6:
-- add new lines and fixes
+Updated to v7.8.8:
+- add new lines
 -->
 <NotepadPlus>
-	<Native-Langue name="Русский" filename="russian.xml" version="7.8.6">
+	<Native-Langue name="Русский" filename="russian.xml" version="7.8.7">
 		<Menu>
 			<Main>
 				<!-- Главное Меню -->
@@ -782,7 +782,7 @@ Updated to v7.8.6:
 					<Item id="6413" name="Директория По Умолчанию (Открыть/Сохранить)"/>
 					<Item id="6414" name="Пройти за текущим документом"/>
 					<Item id="6415" name="Запомнить последнюю директорию"/>
-					<Item id="6430" name="Новый диалог сохранения файла (без запроса расширения файла)"/>
+					<Item id="6430" name="Новый диалог сохранения файла (без возможности пути в стиле Unix)"/>
 					<Item id="6431" name="Открывать все файлы папки при перетаскивании в окно np++"/>
 				</DefaultDir>
 				<FileAssoc title = "Ассоциация Файлов">
@@ -858,7 +858,7 @@ Updated to v7.8.6:
 						<Element name="Всех открытых файлов"/>
 						<Element name="Отключено"/>
 					</ComboBox>
-					<Item id="6308" name="Сворачивать в трей"/>
+					<Item id="6308" name="Сворачивать приложение в трей"/>
 					<Item id="6312" name="Отслеживание Изменений в Файлах"/>
 					<Item id="6313" name="Обновлять не спрашивая"/>
 					<Item id="6318" name="Обработка  Веб-ссылок"/>
@@ -878,6 +878,7 @@ Updated to v7.8.6:
 					<Item id="6345" name="Миниатюра под Вкладкой"/>
 					<Item id="6346" name="Отображать в Карте Документа"/>
 					<Item id="6348" name="Не заполнять поле в окне Поиска выделенным словом"/>
+					<Item id="6349" name="Использовать DirectWrite (требуется перезапуск Notepad++)"/>
 				</MISC>
 				<MultiInstance title = "Режимы Запуска">
 					<Item id="6151" name="Режим Открытия Файлов"/>
@@ -1038,6 +1039,7 @@ Updated to v7.8.6:
 			<LoadLangsFailed             title="Конфигуратор"                        message="Ошибка загрузки langs.xml!&#x0A;Вы хотите восстановить свой langs.xml?"/>
 			<LoadLangsFailedFinal        title="Конфигуратор"                        message="Ошибка загрузки langs.xml!"/>
 			<FolderAsWorspaceSubfolderExists title="Проблема при добавлении &quot;Папка как Рабочая Область&quot;" message="Подпапка папки, которую вы хотите добавить, уже существует.&#x0A;Пожалуйста, удалите её корень, прежде чем добавить папку &quot;$STR_REPLACE$&quot;."/>
+			<ConfirmSaveAs               title="Подтверждение &quot;Сохранить как...&quot;" message="$STR_REPLACE$ уже существует.&#x0A;Вы хотите его заменить?"/>
 
 			<ProjectPanelChanged                 title="$STR_REPLACE$"                message="Рабочая область была изменена. Вы хотите сохранить её?"/>
 			<ProjectPanelChangedSaveError        title="$STR_REPLACE$"                message="Ваше рабочая область не сохранена."/>
@@ -1181,13 +1183,13 @@ Updated to v7.8.6:
 			<find-status-replaceall-re-malformed  value="Замена всех: Регулярное выражение искажено"/>
 			<find-status-replaceall-1-replaced    value="Замена всех: заменено 1 совпадение"/>
 			<find-status-replaceall-nb-replaced   value="Замена всех: заменено $INT_REPLACE$ совпадений"/>
-			<find-status-replaceall-readonly      value="Замена всех: Невозможно заменить текст. Текущий документ доступен только для чтения"/>
-			<find-status-replace-end-reached      value="Замена: Заменено первое совпадение сверху. Достигнут конец документа"/>
-			<find-status-replace-top-reached      value="Замена: Заменено первое совпадение снизу. Достигнуто начало документа"/>
-			<find-status-replaced-next-found      value="Замена: заменено 1 совпадение. Найдено следующее совпадение"/>
-			<find-status-replaced-next-not-found  value="Замена: заменено 1 совпадение. Следующее совпадение не найдено"/>
+			<find-status-replaceall-readonly      value="Замена всех: Невозможно заменить текст. Текущий документ доступен только для чтения."/>
+			<find-status-replace-end-reached      value="Замена: Заменено первое совпадение сверху. Достигнут конец документа."/>
+			<find-status-replace-top-reached      value="Замена: Заменено первое совпадение снизу. Достигнуто начало документа."/>
+			<find-status-replaced-next-found      value="Замена: заменено 1 совпадение. Найдено следующее совпадение."/>
+			<find-status-replaced-next-not-found  value="Замена: заменено 1 совпадение. Совпадений больше не найдено."/>
 			<find-status-replace-not-found        value="Замена: ничего не найдено"/>
-			<find-status-replace-readonly         value="Замена: Невозможно заменить текст. Текущий документ доступен только для чтения"/>
+			<find-status-replace-readonly         value="Замена: Невозможно заменить текст. Текущий документ доступен только для чтения."/>
 			<find-status-cannot-find              value="Поиск: Не удается найти текст &quot;$STR_REPLACE$&quot;"/>
 			<finder-find-in-finder                value="Поиск в найденном..."/>
 			<finder-close-this                    value="Закрыть этот поиск"/>
@@ -1220,6 +1222,18 @@ Updated to v7.8.6:
 			<summary-nbsel1              value=" выделенных символов ("/> 
 			<summary-nbsel2              value=" байт) в "/> 
 			<summary-nbrange             value=" диапазоне(ах)"/>
-		</MiscStrings>
-	</Native-Langue>
+            <replace-in-files-confirm-title      value="Вы уверены?"/>
+            <replace-in-files-confirm-directory  value="Вы точно хотите заменить все совпадения в каталоге :"/>
+            <replace-in-files-confirm-filetype   value="Для типа файла(ов) :"/>
+            <replace-in-open-docs-confirm-title  value="Вы уверены?"/>
+            <replace-in-open-docs-confirm-message value="Вы уверены, что хотите заменить все совпадения во всех открытых документах?"/>
+            <find-result-caption                 value="Результаты поиска"/>
+            <find-result-title                   value="Поиск"/>
+            <find-result-title-info              value="(найдено $INT_REPLACE1$ совпадений в $INT_REPLACE2$ файлах из $INT_REPLACE3$)"/>
+            <find-result-title-info-selections   value="(найдено $INT_REPLACE1$ совпадений в $INT_REPLACE2$ выделениях из $INT_REPLACE3$)"/>
+            <find-result-title-info-extra        value=" - Режим Фильтра Строк: только отображает результаты фильтрования"/>
+            <find-result-hits                    value="(совпадений: $INT_REPLACE$)"/>
+            <find-regex-zero-length-match        value="совпадение нулевой длины"/>
+        </MiscStrings>
+    </Native-Langue>
 </NotepadPlus>
