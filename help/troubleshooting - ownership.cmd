@@ -7,5 +7,5 @@ If %errorlevel% NEQ 0 goto:eof
 set FIX_PERMS_PATH="%CD%"
 :: Take ownership and reset permissions
 takeown /f "%FIX_PERMS_PATH%" /r & icacls "%FIX_PERMS_PATH%" /reset /t /c /q
-:: Press enter to exit th script
+:: Press enter to exit the script
 pause
