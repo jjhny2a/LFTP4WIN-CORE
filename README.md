@@ -1,6 +1,6 @@
 # Lftp for Windows - LFTP4WIN-CORE
 
-Copyright 2019 by userdocs and contributors for LFTP4WIN-CORE
+Copyright 2020 by userdocs and contributors for LFTP4WIN-CORE
 
 SPDX-License-Identifier: Apache-2.0
 
@@ -8,53 +8,9 @@ Applies to all files included unless those files, created by another author, hav
 
 Please see the [License](LICENSE.txt) for more details.
 
-## Core features
-
-### Using ConEmu
-
-* Open ConEmu using `bash` with `ssh-pageant` automatically loaded for the duration of each session.
-* Install extra programs using [apt-cyg](https://github.com/kou1okada/apt-cyg)
-* Full Cygwin functionality. Use any Cygwin installable program, Windows program, or bash scripts.
-* Script your own solutions using Windows or Cygwin tools.
-
-### Using special custom WinSCP commands in the GUI you can
-
-* Connect to the remote directory using `lftp` in ConEmu and list files. The local folder will be the download directory.
-* Easily create or remove a scheduled task to mirror a remote directory with custom `lftp` argument support.
-* Single click lftp downloads from WinSCP remote directories to local WinSCP directories, for files or folders.
-* Queuing system that supports directory changes in the WinSCP GUI when an active transfer is in progress and post processing extensions.
-* Easy access to `lftp` settings via custom commands. Globally applied in the `lftp.conf` or individually for `pget` and `mirror` custom commands.
-* Simple notifications on completed downloads via `pushover` or `pushbullet` or both.
-* Network testing with `iperf3` and `mtr`. Reports can be generated to a file.
-* Kitty to access and control your remote server using SSH.
-
-## Useful features
-
-* Designed to be easy to update with no loss of configuration of settings.
-* Built on top of a full base Cygwin installation with `apt-cyg` provided to install new programs when needed.
-* `noacl` (file permissions) and `sparse` files (large files) enabled by default.
-* Scripted post processing for `mirror`,`pget` and `lftpsync` custom commands available using extensions.
-* Downloads can be queued from multiple open sessions across open sites using all supported protocols - sftp - ftp with ssl/tls - plain ftp.
-* sftp or ftp with ssl/tls protocols automatically detected and used with lftp based on the WinSCP session type.
-* Unencrypted ftp is supported by modifying the `lftp.conf` ssl settings to not force ssl/tls.
-* A single WinSCP session provides full WinSCP functionality, ssh control via Kitty and Cygwin functionality from a single set of credentials using key files or a password.
-* Easily extended using Cygwin or custom command extensions via WinSCP's powerful extension and scripting interface.
-* 100% portable for Windows x64 systems.
-
-## Notes
-
-* Tested with openssh and proftpd 1.3.6 using mod_sftp and mod_tls.
-* From `LFTP4WIN` updating to a new release is as simple as using the `LFTP4WIN-import.cmd`.
-
-## Example
-
 ![speeds](help/docs/readme-images/speeds.jpg)
 
-It just works and the possibilities are endless.
-
 ## Contents
-
-<details><summary>Click to expand or close</summary><p>
 
 [Introduction](#introduction)
 
@@ -78,25 +34,17 @@ It just works and the possibilities are endless.
 
 [Comments](#comments)
 
-</p></details>
-
 ## Introduction
-
-<details><summary>Click to expand or close</summary><p>
 
 [Return to the Contents menu](#contents)
 
-`LFTP4WIN-CORE` is a solution to the problem of `lftp` in an easy and user friendly way on Windows. This is achieved using WinSCP, ConEmu, Cygwin and bash/Windows scripting. This is template deployed by the [LFTP4WIN installer](https://github.com/userdocs/LFTP4WIN), applied to a specially configured Cygwin portable installation.
+`LFTP4WIN-CORE` is a solution to the problem of using `lftp` in an easy and user friendly way on Windows whilst achieving maximum performance. This is achieved using WinSCP, ConEmu, Cygwin and bash/Windows scripting. This is template deployed by the [LFTP4WIN installer and applied over a specially configured Cygwin portable installation. It can be installed and run and non admin user.
 
 To help understand the project here is a basic diagram of the work flow and how the components interact.
 
 ![diagram](help/docs/readme-images/diagram.jpg)
 
-The core of the solution is built around a Cygwin base installation including `bsdtar`, `openssh`, `openssl`, `lftp`, `curl`, `ssh-pageant`, `mtr`,  `iperf3` and `unrar`.
-
-The self contained environment for these binaries is managed using the ConEmu terminal to provide an interface to Cygwin and custom bash scripts. The ConEmu bash environment is similar to a standard Linux one in terms of directory structure and expected file locations.
-
-The bash scripts interpret WinSCP session variables that it can pass through it's custom commands and translate them into bash shell variables for use with bash scripting.
+A special set of bash scripted functions are used to translate WinSCP session variables into bash variables that can then be passed to our Cygwin applications via our bash shell. By combining WinSCP extension features with bash scripting we are able to create a basic gui experience for using lftp on Windows as well as interface with other applications like openssh.
 
 When all the parts are combined the solution becomes a powerful administrative toolbox for managing remote servers and providing access to Linux tools locally while being 100% portable and self contained.
 
@@ -104,7 +52,7 @@ No admin privileges required, simple to use and with a huge potential to extend 
 
 One login to rule them all!
 
-**Disclaimer:** The solution works well to download with `lfpt` on Windows x64 but you may experience bottlenecks from peering to your remote host or from your PC hardware and local network setup. For example, an NVME SSD will provide superior results compared to an old mechanical drive. So there is no one configuration thats fits all options and you may need to tweak the default lftp settings to find the best way to leverage your current setup to its max potential. The readme should contain all the information you need to understand and configure the solution.
+**Disclaimer:** The solution works well to download with `lftp' on Windows x64 but you may experience bottlenecks from peering to your remote host or from your PC hardware and local network setup. For example, an NVME SSD will provide superior results compared to an old mechanical drive. So there is no one configuration that fits all options and you may need to tweak the default lftp settings to find the best way to leverage your current setup to its max potential. The readme should contain all the information you need to understand and configure the solution.
 
 [How to monitor your network performance when using this solution](https://www.ghacks.net/2017/12/28/a-detailed-windows-resource-monitor-guide/)
 
@@ -116,11 +64,7 @@ Peering with remote server - Use the `iperf3` command to generate a report.
 
 Local network setup - I don't know your the details of your network setup unless you specifically provide those details for assistance when trouble shooting.
 
-</p></details>
-
 ## Getting started
-
-<details><summary>Click to expand or close</summary><p>
 
 [Return to the Contents menu](#contents)
 
@@ -208,11 +152,7 @@ The `Double Click Me - WinSCP Startup.cmd` checks the `keys` folder for `ppk` fo
 
 `ssh-pageant` will use communicate with kageant to provide authentication in ConEmu when it is loaded for lftp and other uses.
 
-</p></details>
-
 ## Commands
-
-<details><summary>Click to expand or close</summary><p>
 
 [Return to the Contents menu](#contents)
 
@@ -290,11 +230,7 @@ Once you have created an account with either or both services you need to use th
 
 Once you have done that you will get a Pushbullet or Pushover notification to your devices when either a mirror, pget or sync task completes.
 
-</p></details>
-
 ## Lftp configuration
-
-<details><summary>Click to expand or close</summary><p>
 
 [Return to the Contents menu](#contents)
 
@@ -306,11 +242,7 @@ By default lftp settings are managed in the `lftp.conf` which can be accessed by
 
 You should manage your settings here unless you want to have different settings for mirror and pget commands. In order to different settings for each command you can set the variables using the WinSCP custom command `lftp-conf-override`.
 
-</p></details>
-
 ## Lftp mirror automation using task scheduler
-
-<details><summary>Click to expand or close</summary><p>
 
 [Return to the Contents menu](#contents)
 
@@ -362,11 +294,7 @@ Congratulations, you are now using lftp on Windows automated via Windows Task Sc
 
 Set it and forget it.
 
-</p></details>
-
 ## Scripts
-
-<details><summary>Click to expand or close</summary><p>
 
 [Return to the Contents menu](#contents)
 
@@ -390,11 +318,7 @@ Here is a brief description of script included.
 
 `lftpsync.cmd` - This is file the the Windows Task Scheduler uses to process the `lftpsync.sh` task.
 
-</p></details>
-
 ## Help - how to use
-
-<details><summary>Click to expand or close</summary><p>
 
 [Return to the Contents menu](#contents)
 
@@ -425,11 +349,7 @@ From version `2.0` these files should no longer be needed but I'll leave them he
 
 `troubleshooting - ownership.cmd` - Use only if you are have file ownership issues with transferred files.
 
-</p></details>
-
 ## Updating
-
-<details><summary>Click to expand or close</summary><p>
 
 [Return to the Contents menu](#contents)
 
@@ -460,11 +380,7 @@ The WinSCP custom commands are loaded as WinSCP extension files and are independ
 
 **Cygwin** Use the `LFTP4WIN-update.cmd` file to update Cygwin.
 
-</p></details>
-
 ## troubleshooting
-
-<details><summary>Click to expand or close</summary><p>
 
 [Return to the Contents menu](#contents)
 
@@ -500,11 +416,7 @@ You are having trouble connecting with the `lftpsync.sh` script?
 
 Use the debugging option and it should provide useful information to help.
 
-</p></details>
-
 ## Known bugs
-
-<details><summary>Click to expand or close</summary><p>
 
 [Return to the Contents menu](#contents)
 
@@ -512,11 +424,7 @@ Sometimes, when `mirror-to-local` to a custom directory lftp gets confused and c
 
 *Never us `rm` on this `/cygdrive` as it will get interpreted as `/cygdrive/c` and try to wipe you C drive.*
 
-</p></details>
-
 ## Programs included and configured
-
-<details><summary>Click to expand or close</summary><p>
 
 [Return to the Contents menu](#contents)
 
@@ -544,8 +452,6 @@ All programs included are unmodified from their original releases. They are only
 
 `iperf3` - [https://iperf.fr/iperf-download.php](https://iperf.fr/iperf-download.php)
 
-</p></details>
-
 ## Comments
 
 <details><summary>Click to expand or close</summary><p>
@@ -559,5 +465,3 @@ What remains is to document how to extend and build on top of it to create furth
 [https://winscp.net/eng/docs/custom_command](https://winscp.net/eng/docs/custom_command)
 
 [https://winscp.net/eng/docs/extension](https://winscp.net/eng/docs/extension)
-
-</p></details>
