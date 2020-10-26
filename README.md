@@ -38,17 +38,17 @@ Please see the [License](LICENSE.txt) for more details.
 
 [Return to the Contents menu](#contents)
 
-`LFTP4WIN-CORE` is a solution to the problem of using `lftp` in an easy and user friendly way on Windows whilst achieving maximum performance. This is achieved using WinSCP, ConEmu, Cygwin and bash/Windows scripting. This is template deployed by the [LFTP4WIN installer and applied over a specially configured Cygwin portable installation. It can be installed and run and non admin user.
+`LFTP4WIN-CORE` is a solution to the problem of using `lftp` in an easy and user friendly way on Windows whilst achieving maximum performance. This is achieved using WinSCP, ConEmu, Cygwin and bash/Windows scripting. This is template deployed by the [LFTP4WIN](https://github.com/userdocs/LFTP4WIN) installer and applied over a configured Cygwin portable installation with a specially configured environment. It can be installed and run as a local user with no elevated privileges required.
 
-To help understand the project here is a basic diagram of the work flow and how the components interact.
+To help understand the project as a whole, here is a basic diagram of the work flow and how the components interact.
 
 ![diagram](help/docs/readme-images/diagram.jpg)
 
-A special set of bash scripted functions are used to translate WinSCP session variables into bash variables that can then be passed to our Cygwin applications via our bash shell. By combining WinSCP extension features with bash scripting we are able to create a basic gui experience for using lftp on Windows as well as interface with other applications like openssh.
+A special set of bash functions are used to translate WinSCP session variables into bash shell environment variables that can then be used by our Cygwin applications. By combining WinSCP extension features with bash scripting we are able to create a basic GUI experience for using lftp on Windows as well as interface with other applications like OpenSSH.
 
 When all the parts are combined the solution becomes a powerful administrative toolbox for managing remote servers and providing access to Linux tools locally while being 100% portable and self contained.
 
-No admin privileges required, simple to use and with a huge potential to extend functionality even further or configured as a template for custom deployment.
+No admin privileges required, simple to use and with a huge potential to extend functionality even further.
 
 One login to rule them all!
 
@@ -68,15 +68,15 @@ Local network setup - I don't know your the details of your network setup unless
 
 [Return to the Contents menu](#contents)
 
-[Download the zip file](https://github.com/userdocs/LFTP4WIN/archive/master.zip) and then extract it somewhere.
+**Note:** - Installation is documented in the readme for the deployment tool used to install the LFTP4WIN solution - [LFTP4WIN](https://github.com/userdocs/LFTP4WIN)
 
-Inside the main folder you see these main files once the install is complete.
+Inside the main folder of a completed `LFTP4WIN` installation you see these main files once the install is complete.
 
-`Double Click Me - WinSCP Startup.cmd`- Loads your key files in the `/keys` folder and starts WInSCP.
+`Double Click Me - WinSCP Startup.cmd` - Loads your key files in the `/keys` folder and starts WInSCP.
 
 `LFTP4WIN-import.cmd` - Imports your settings from a previous release starting from version `LFTP4WIN`
 
-`LFTP4WIN-conemu.cmd` - Opens a new ConEmu bash session.
+`LFTP4WIN-terminal.cmd` - Opens a new local terminal session.
 
 `LFTP4WIN-update.cmd` - Updates Cygwin and the LFTP4WIN CORE files - Your configuration files will not be reset.
 
@@ -164,31 +164,33 @@ The `Double Click Me - WinSCP Startup.cmd` checks the `keys` folder for `ppk` fo
 
 Here is brief description of the custom commands you need to understand to use this solution properly.
 
-`ConEmu` - Open a ConEmu bash session with `ssh-pageant` loaded. Your home directory is located in the root of the solution.
+`notifications` - This command will let you set your pushover or pushbullet api settings for notifications.
+
+![notification](help/docs/readme-images/notifications.jpg)
+
+`open-lftp-conf` opens the main `lfpt.conf` file in notepad++ for editing. This file is for global settings but please note the `mirror-to-local` and `pget-to-local` commands can use script built in settings modified with the `Lftp Script Options` command that will override these settings. The script settings are blank or set to `0` by default meaning the `lftp.conf` is used until they are manually set.
+
+`lftpsync-setup` - This custom command will generate the `lftpsync-config.sh` settings for the currently visited local and remote directories and create a scheduled task. If used again it will update all settings. It can be used to reset the `lftpsync-config.sh` script and remove the scheduled task.
+
+![lftpsync-setup](help/docs/readme-images/lftpsync-setup.jpg)
+
+`lftp-conf-override` - This custom command edits a file using specified options. Use this to set per command settings that will override the `lftp.conf` defaults.
+
+![lftp-conf-override](help/docs/readme-images/lftp-conf-override.jpg)
 
 `mirror-to-local` - This command will mirror your selected directory in the lower right remote window of WinSCP to local downloads directory in the in the lower left panel of WinSCP.
 
 `pget-to-local` - This command will pget your selected file in the lower right remote window of WinSCP to local downloads directory in the in the lower left panel of WinSCP.
 
-`open-lftp-conf` opens the main `lfpt.conf` file in notepad++ for editing. This file is for global settings but please note the `mirror-to-local` and `pget-to-local` commands can use script built in settings modified with the `Lftp Script Options` command that will override these settings. The script settings are blank or set to `0` by default meaning the `lftp.conf` is used until they are manually set.
-
 `queued-jobs` This command lets you see the queued commands in the jobs file.
+
+`iperf3` - Uses this script [https://git.io/fjRIi](https://git.io/fjRIi) to install iperf3 on your remote server and configure it. It will then load via the default terminal and loads the local `iperf3.sh` script to run a test using iperf3 and then generate a report using mtr. The output of the console is logged to `help/report/report-sessioname.txt`
 
 `lftp` - Advanced: This will connect to the remote directory and list all files and folders with lftp. The local directory will be same as the WinSCP local directory at the point of connection. This command is mostly used for debugging and testing but provides functional usage of lftp via the command line.
 
-`iperf3` - Uses this script [https://git.io/fjRIi](https://git.io/fjRIi) to install iperf3 on your remote server and configure it. It will then load ConEmu and loads the local `iperf3.sh` script to run a test using iperf3 and then generate a report using mtr. The output of the console is logged to `help/report/report-sessioname.txt`
+`OpenSSH` - Open a terminal session and connect to the remote host using OpenSSH - `ssh-pageant` loaded automatically for keyfile authentication.
 
-`lftp-conf-override` - This custom command edits a file using specified options. Use this to set per command settings that will override the `lftp.conf` defaults.
-
-![lftpsync-create](help/docs/readme-images/lftp-conf-override.jpg)
-
-`lftpsync-create` - This custom command will generate the `lftpsync.sh` settings for the currently visited local and remote directories and create a scheduled task. If used again it will update all settings. It can be used to reset the `lftpsync.sh` script and remove the scheduled task.
-
-![lftpsync-create](help/docs/readme-images/lftpsync-setup.jpg)
-
-`notifications` - This command will let you set your pushover or pushbullet api settings for notifications.
-
-![lftpsync-create](help/docs/readme-images/notifications.jpg)
+`Terminal` - Open a local terminal session with `ssh-pageant` loaded. Your home directory is located in the root of the solution.
 
 `SSH access using Kitty` - WinSCP has a specific button that has been configured for kitty integration. Just click the button shown in the image below to do this.
 
@@ -453,8 +455,6 @@ All programs included are unmodified from their original releases. They are only
 `iperf3` - [https://iperf.fr/iperf-download.php](https://iperf.fr/iperf-download.php)
 
 ## Comments
-
-<details><summary>Click to expand or close</summary><p>
 
 [Return to the Contents menu](#contents)
 
