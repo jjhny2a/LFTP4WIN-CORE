@@ -72,11 +72,11 @@ Local network setup - I don't know your the details of your network setup unless
 
 Inside the main folder of a completed `LFTP4WIN` installation you see these main files once the install is complete.
 
-`Double Click Me - WinSCP Startup.cmd` - Loads your key files in the `/keys` folder and starts WInSCP.
+`Double Click Me - WinSCP Startup.cmd` -Loads your key files in the `/keys` folder and starts WinSCP.
 
-`LFTP4WIN-import.cmd` - Imports your settings from a previous release starting from version `LFTP4WIN`
+`LFTP4WIN-import.cmd` - Imports your settings from a previous release starting from version `LFTP4WIN` (V2 only)
 
-`LFTP4WIN-terminal.cmd` - Opens a new local terminal session.
+`LFTP4WIN-terminal.cmd` - Opens a new local terminal session with keyfiles loaded in the session.
 
 `LFTP4WIN-update.cmd` - Updates Cygwin and the LFTP4WIN CORE files - Your configuration files will not be reset.
 
@@ -156,7 +156,9 @@ The `Double Click Me - WinSCP Startup.cmd` checks the `keys` folder for `ppk` fo
 
 [Return to the Contents menu](#contents)
 
-### Custom commands explained
+**Note:** WinSCP does not have a method to load values from a file when using this custom commands. It will always load the default value unless you have defined a new default in the WinSCP options for the relevant command.
+
+The custom commands are located in the navigation bar at the top of the WinSCP window. In order to properly use this solution you will need to understand and use these custom commands.
 
 ![commands](help/docs/readme-images/commands.jpg)
 
@@ -164,39 +166,75 @@ The `Double Click Me - WinSCP Startup.cmd` checks the `keys` folder for `ppk` fo
 
 Here is brief description of the custom commands you need to understand to use this solution properly.
 
-`notifications` - This command will let you set your pushover or pushbullet api settings for notifications.
+### notifications
+
+This command will let you set your pushover or pushbullet api settings for notifications.
 
 ![notification](help/docs/readme-images/notifications.jpg)
 
-`open-lftp-conf` opens the main `lfpt.conf` file in notepad++ for editing. This file is for global settings but please note the `mirror-to-local` and `pget-to-local` commands can use script built in settings modified with the `Lftp Script Options` command that will override these settings. The script settings are blank or set to `0` by default meaning the `lftp.conf` is used until they are manually set.
+### open-lftp-conf
 
-`lftpsync-setup` - This custom command will generate the `lftpsync-config.sh` settings for the currently visited local and remote directories and create a scheduled task. If used again it will update all settings. It can be used to reset the `lftpsync-config.sh` script and remove the scheduled task.
+This command opens the main `lftp.conf` file in the  included notepad ++ for editing. Modifications to this file will apply global lftp settings that will take effect in a new local or remote terminal.
+
+**Note:** The `mirror-to-local` and `pget-to-local` commands will have certain settings overridden when configured using the `Lftp Script Options` command but these settings are not globally applied to lftp.
+
+### lftpsync-setup
+
+This custom command will generate the `lftpsync-config.sh` settings for the currently visited local and remote directories and create a scheduled task. If used again it will update all settings. It can be used to reset the `lftpsync-config.sh` script and remove the scheduled task.
 
 ![lftpsync-setup](help/docs/readme-images/lftpsync-setup.jpg)
 
-`lftp-conf-override` - This custom command edits a file using specified options. Use this to set per command settings that will override the `lftp.conf` defaults.
+### lftp-conf-override
+
+This custom command edits a file using specified options. Use this to set per command settings that will override the `lftp.conf` defaults when the custom mirror or pget commands are used. They do not apply globally to lftp.
 
 ![lftp-conf-override](help/docs/readme-images/lftp-conf-override.jpg)
 
-`mirror-to-local` - This command will mirror your selected directory in the lower right remote window of WinSCP to local downloads directory in the in the lower left panel of WinSCP.
+If the `Lftp Script Options` script settings are blank or set to `0` by default meaning the `lftp.conf` is used until they are manually set.
 
-`pget-to-local` - This command will pget your selected file in the lower right remote window of WinSCP to local downloads directory in the in the lower left panel of WinSCP.
+### mirror-to-local
 
-`queued-jobs` This command lets you see the queued commands in the jobs file.
+This command will mirror your selected directory in the lower right remote window of WinSCP to local downloads directory in the in the lower left panel of WinSCP.
 
-`iperf3` - Uses this script [https://git.io/fjRIi](https://git.io/fjRIi) to install iperf3 on your remote server and configure it. It will then load via the default terminal and loads the local `iperf3.sh` script to run a test using iperf3 and then generate a report using mtr. The output of the console is logged to `help/report/report-sessioname.txt`
+### pget-to-local
 
-`lftp` - Advanced: This will connect to the remote directory and list all files and folders with lftp. The local directory will be same as the WinSCP local directory at the point of connection. This command is mostly used for debugging and testing but provides functional usage of lftp via the command line.
+This command will pget your selected file in the lower right remote window of WinSCP to local downloads directory in the in the lower left panel of WinSCP.
 
-`OpenSSH` - Open a terminal session and connect to the remote host using OpenSSH - `ssh-pageant` loaded automatically for keyfile authentication.
+### queued-jobs
 
-`Terminal` - Open a local terminal session with `ssh-pageant` loaded. Your home directory is located in the root of the solution.
+This command lets you see the queued commands in the jobs file.
 
-`SSH access using Kitty` - WinSCP has a specific button that has been configured for kitty integration. Just click the button shown in the image below to do this.
+### iperf3
+
+Uses this script [https://git.io/fjRIi](https://git.io/fjRIi) to install iperf3 on your remote server and configure it. It will then load via the default terminal and loads the local `iperf3.sh` script to run a test using iperf3 and then generate a report using mtr. The output of the console is logged to `help/report/report-sessioname.txt`
+
+### lftp
+
+Advanced: This will connect to the remote directory and list all files and folders with lftp. The local directory will be same as the WinSCP local directory at the point of connection. This command is mostly used for debugging and testing but provides functional usage of lftp via the command line.
+
+### OpenSSH
+
+Open a terminal session and connect to the remote host using OpenSSH - `ssh-pageant` loaded automatically for keyfile authentication.
+
+### Terminal
+
+Open a local terminal session with `ssh-pageant` loaded. Your home directory is located in the root of the solution.
+
+### Custom command configuration
+
+Some commands have options available that change their behaviour. You can access the custom command option in the WinSCP preferences menu.
+
+![custom-commands-config](help/docs/readme-images/custom-commands-config.jpg)
+
+## SSH access using Kitty
+
+WinSCP has a specific button that has been configured for kitty integration. Just click the button shown in the image below to do this.
 
 ![kitty](help/docs/readme-images/kitty.jpg)
 
-### Queuing explained
+**Note:** The integration of OpenSSH via Cygwin using the `OpenSSH` custom command provides a more complete experience.
+
+## Queuing explained
 
 Queuing works when a transfer is already in progress. In WinSCP navigate to the local directory and remote directory or file and use the `mirror-to-local` or `pget-to-local` command again. It will ask you if you want to queue the transfer and automatically initiate it once the previous transfer has completed. It does this by adding a transfer commands to a watched file called `jobs.sh`.
 
