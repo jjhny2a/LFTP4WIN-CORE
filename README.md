@@ -172,6 +172,10 @@ This command will let you set your pushover or pushbullet api settings for notif
 
 ![notification](help/docs/readme-images/notifications.jpg)
 
+This command has some options you can set.
+
+![notification-settings](help/docs/readme-images/notifications-settings.jpg)
+
 ### open-lftp-conf
 
 This command opens the main `lftp.conf` file in the  included notepad ++ for editing. Modifications to this file will apply global lftp settings that will take effect in a new local or remote terminal.
@@ -184,11 +188,19 @@ This custom command will generate the `lftpsync-config.sh` settings for the curr
 
 ![lftpsync-setup](help/docs/readme-images/lftpsync-setup.jpg)
 
+This command has some options you can set.
+
+![lftpsync-setup-settings](help/docs/readme-images/lftpsync-setup-settings.jpg)
+
 ### lftp-conf-override
 
 This custom command edits a file using specified options. Use this to set per command settings that will override the `lftp.conf` defaults when the custom mirror or pget commands are used. They do not apply globally to lftp.
 
 ![lftp-conf-override](help/docs/readme-images/lftp-conf-override.jpg)
+
+This command has some options you can set.
+
+![lftp-conf-override](help/docs/readme-images/lftp-conf-override-settings.jpg)
 
 If the `Lftp Script Options` script settings are blank or set to `0` by default meaning the `lftp.conf` is used until they are manually set.
 
@@ -196,9 +208,17 @@ If the `Lftp Script Options` script settings are blank or set to `0` by default 
 
 This command will mirror your selected directory in the lower right remote window of WinSCP to local downloads directory in the in the lower left panel of WinSCP.
 
+This command has some options you can set.
+
+![mirror-to-local-settings](help/docs/readme-images/mirror-to-local-settings.jpg)
+
 ### pget-to-local
 
 This command will pget your selected file in the lower right remote window of WinSCP to local downloads directory in the in the lower left panel of WinSCP.
+
+This command has some options you can set.
+
+![pget-to-local-settings](help/docs/readme-images/pget-to-local-settings.jpg)
 
 ### queued-jobs
 
@@ -208,17 +228,33 @@ This command lets you see the queued commands in the jobs file.
 
 Uses this script [https://git.io/fjRIi](https://git.io/fjRIi) to install iperf3 on your remote server and configure it. It will then load via the default terminal and loads the local `iperf3.sh` script to run a test using iperf3 and then generate a report using mtr. The output of the console is logged to `help/report/report-sessioname.txt`
 
+This command has some options you can set.
+
+![iperf3-settings](help/docs/readme-images/iperf3-settings.jpg)
+
 ### lftp
 
 Advanced: This will connect to the remote directory and list all files and folders with lftp. The local directory will be same as the WinSCP local directory at the point of connection. This command is mostly used for debugging and testing but provides functional usage of lftp via the command line.
 
+This command has some options you can set.
+
+![lftp-settings](help/docs/readme-images/lftp-settings.jpg)
+
 ### OpenSSH
 
-Open a terminal session and connect to the remote host using OpenSSH - `ssh-pageant` loaded automatically for keyfile authentication.
+Open a terminal session and connect to the remote host using OpenSSH - `ssh-pageant` loaded automatically for key file authentication.
+
+This command has some options you can set.
+
+![openssh-settings](help/docs/readme-images/openssh-settings.jpg)
 
 ### Terminal
 
 Open a local terminal session with `ssh-pageant` loaded. Your home directory is located in the root of the solution.
+
+This command has some options you can set.
+
+![terminal-settings](help/docs/readme-images/terminal-settings.jpg)
 
 ### Custom command configuration
 
@@ -242,9 +278,9 @@ You can queue jobs for different local directories and remote files or directori
 
 If you use an post processing extension for `lftpsync.sh` or `mirror-to-local.sh` they will run after each queued command is processed.
 
-### Notifications using Pushbullet or Pushover
+## Notifications using Pushbullet or Pushover
 
-#### For Pushbullet services
+### For Pushbullet services
 
 If you don't have an account go make one here [https://www.pushbullet.com/](https://www.pushbullet.com/)
 
@@ -252,7 +288,7 @@ Then you need to visit this URL to generate an API key: [https://www.pushbullet.
 
 ![pushbullet-api](help/docs/readme-images/pushbullet-api.jpg)
 
-#### For Pushover services
+### For Pushover services
 
 If you don't have an account go make one here: [https://pushover.net/login](https://pushover.net/login)
 
@@ -314,7 +350,7 @@ You should manage your settings here unless you want to have different settings 
 
 `8` - Optional `mirror_parallel_transfer_count` settings you want the script to use. `lftp.conf` is used if this is blank or `0`.
 
-`9`- Optional `mirror_use_pget_n`settings you want the script to use. `lftp.conf` is used if this is blank.
+`9` - Optional `mirror_use_pget_n`settings you want the script to use. `lftp.conf` is used if this is blank.
 
 `10` - Optional `mirror_args` settings you want the script to use. `-c` is the default switch used.
 
