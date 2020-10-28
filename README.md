@@ -1,13 +1,5 @@
 # Lftp for Windows - LFTP4WIN-CORE
 
-Copyright 2020 by userdocs and contributors for LFTP4WIN-CORE
-
-SPDX-License-Identifier: Apache-2.0
-
-Applies to all files included unless those files, created by another author, have their own license. Then that license will apply to those files and any derivatives of this project that makes use of those included works.
-
-Please see the [License](LICENSE.txt) for more details.
-
 ![speeds](help/docs/readme-images/speeds.jpg)
 
 ## Contents
@@ -38,7 +30,7 @@ Please see the [License](LICENSE.txt) for more details.
 
 [Return to the Contents menu](#contents)
 
-`LFTP4WIN-CORE` is a solution to the problem of using `lftp` in an easy and user friendly way on Windows whilst achieving maximum performance. This is achieved using WinSCP, ConEmu, Cygwin and bash/Windows scripting. This is template deployed by the [LFTP4WIN](https://github.com/userdocs/LFTP4WIN) installer and applied over a configured Cygwin portable installation with a specially configured environment. It can be installed and run as a local user with no elevated privileges required.
+`LFTP4WIN-CORE` is a solution to the problem of using [lftp](https://lftp.yar.ru/) in an easy and user friendly way on Windows whilst achieving maximum performance. This is achieved using WinSCP, ConEmu, Cygwin and bash/Windows scripting. The LFTP4WIN-CORE template is deployed by the [LFTP4WIN](https://github.com/userdocs/LFTP4WIN) installer and applied over a configured Cygwin portable installation using a specially configured and localised environment. It can be installed and run as a local user with no elevated privileges required.
 
 To help understand the project as a whole, here is a basic diagram of the work flow and how the components interact.
 
@@ -76,7 +68,7 @@ Inside the main folder of a completed `LFTP4WIN` installation you see these main
 
 `LFTP4WIN-import.cmd` - Imports your settings from a previous release starting from version `LFTP4WIN` (V2 only)
 
-`LFTP4WIN-terminal.cmd` - Opens a new local terminal session with keyfiles loaded in the session.
+`LFTP4WIN-terminal.cmd` - Opens a new local terminal session with key files loaded in the session.
 
 `LFTP4WIN-update.cmd` - Updates Cygwin and the LFTP4WIN CORE files - Your configuration files will not be reset.
 
@@ -104,13 +96,13 @@ All you need to do is edit this session to use your server connection details an
 
 A password like this will work perfectly across the entire solution and all extensions of it, like portable kitty.
 
- ~~~
+ ~~~bash
  DSref352YjeuakdueW
  ~~~
 
 A password like this will work with the custom commands and lftp but won't work with kitty and WinSCP integration - (I tested this password)
 
- ~~~
+ ~~~bash
 ¬`!£$%^&*()_-+={[}]~#:;@'<,>.?/|\}
  ~~~
 
@@ -130,7 +122,7 @@ If you don't need to use a private key to authorize your connection you can move
 
 **Note:** Please read this [guide](https://www.ssh.com/ssh/putty/windows/puttygen) for using puttygen import or create key files.
 
-All you need is to have your key file in the Putty format. You can create a new ppk format key using `puttygen`. It can also load and export an OpenSSH format key to the ppk format.
+All you need is to have your key file in the Putty format. You can create a new PPK format key using `puttygen`. It can also load and export an OpenSSH format key to the ppk format.
 
 **Note:** Loading too many keys from the `keys` folder may result in authentication errors. I suggest you keep it simple and only have a few unique keys here relative to your sessions.
 
@@ -402,7 +394,7 @@ There is a help folder with some tools to edit scripts,files and fix permissions
 
 `remove usb.cmd` - Run this to close the main apps included. This is what the file contains.
 
-~~~
+~~~cmd
 taskkill /f /im "ssh-pageant.exe"
 taskkill /f /im "kageant.exe"
 taskkill /f /im "WinSCP.exe"
@@ -446,7 +438,7 @@ Windows task scheduler jobs are not changed. As long as the new LFTP4WIN folder 
 
 The WinSCP custom commands are loaded as WinSCP extension files and are independent from the main `WinSCP.ini` file. Extensions are loaded from the `system/applications/winscp` directory and have the name format of `winscp-command-name.WinSCPextension` and they are automatically loaded into WinSCP when it starts. You can add your own in the same way.
 
-*Note: Extensions can have the extension of the language they use. So `winscp-command-name.WinSCPextension` cna be `winscp-command-name.WinSCPextension.sh` if it is a bash script.*
+*Note: Extensions can have the extension of the language they use. So `winscp-command-name.WinSCPextension` can be `winscp-command-name.WinSCPextension.sh` if it is a bash script.*
 
 **ConEmu:** This program automatically checks for updates when running. It will prompt you.
 
@@ -470,7 +462,7 @@ Occasionally a new version of WinSCP resets the layout. Then all you need to do 
 
 Here is the integration command used in case it gets lost or changed.
 
-~~~
+~~~cmd
 "%WINSCP_PATH%\..\kitty\kitty_portable.exe" -pw "!P" "!U@!@" -P "!#" -title "!N" -classname "lftp4win" -cmd "cd '!/'"
 ~~~
 
