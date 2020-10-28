@@ -172,7 +172,7 @@ This command has some options you can set.
 
 This command opens the main `lftp.conf` file in the  included notepad ++ for editing. Modifications to this file will apply global lftp settings that will take effect in a new local or remote terminal.
 
-**Note:** The `mirror-to-local` and `pget-to-local` commands will have certain settings overridden when configured using the `Lftp Script Options` command but these settings are not globally applied to lftp.
+**Note:** The `mirror-to-local` and `pget-to-local` commands will have certain settings overridden when configured using the `lftp-conf-override` command but these settings are not globally applied to lftp.
 
 ### lftpsync-setup
 
