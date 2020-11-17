@@ -186,7 +186,7 @@ This command has some options you can set.
 
 ### lftp-conf-override
 
-This custom command edits a file using specified options. Use this to set per command settings that will override the `lftp.conf` defaults when the custom mirror or pget commands are used. They do not apply globally to lftp.
+This custom command edits a file using specified options. Use this to set per command settings that will override the `lftp.conf` defaults when the custom `mirror-to-local` or `pget-to-local` commands are used. They do not apply globally to lftp.
 
 ![lftp-conf-override](help/docs/readme-images/lftp-conf-override.jpg)
 
