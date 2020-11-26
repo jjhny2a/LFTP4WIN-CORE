@@ -22,17 +22,17 @@
 #
 #! /usr/bin/env bash
 #
-winscp_to_bash "$1" "$2" "$3" "$4" "$5" "$6"
+winscp_to_bash "${@}"
 #
-openssh_known_hosts "$port" "$hostname"
+openssh_known_hosts "${port}" "${hostname}"
 #
-export SSHPASS="$password"
+export SSHPASS="${password}"
 #
-cd "$local_dir"
+cd "${local_dir}"
 #
-[[ -n "$7" ]] && DYNAMIC="-D $7" || DYNAMIC=""
-[[ -n "$8" && "$8" = 'yes' ]] && CDREMOTE="cd '$remote_dir'; bash -li" || CDREMOTE=""
+[[ -n "${7}" ]] && DYNAMIC="-D ${7}" || DYNAMIC=""
+[[ -n "${8}" && "${8}" = 'yes' ]] && CDREMOTE="cd '${remote_dir}'; bash -li" || CDREMOTE=""
 #
-sshpass -e ssh -qt "$DYNAMIC" -p "$port" "$username@$hostname" "$CDREMOTE"
+sshpass -e ssh -qt "${DYNAMIC}" -p "${port}" "${username}@${hostname}" "${CDREMOTE}"
 #
-exit
+history -c

@@ -13,12 +13,12 @@
 #
 #! /usr/bin/env bash
 #
-winscp_to_bash "$1" "$2" "$3" "$4" "$5" "$6"
+winscp_to_bash "${@}"
 #
-openssh_known_hosts "$port" "$hostname"
+openssh_known_hosts "${port}" "${hostname}"
 #
-cd "$local_dir"
+cd "${local_dir}"
 #
-lftp -p "$port" -u "$username,$password" "$protocol://$hostname" -e "cd \"$remote_dir\"; cls -1aB"
+lftp -p "${port}" -u "${username},${password}" "${protocol}://${hostname}" -e "cd \"${remote_dir}\"; cls -1aB"
 #
-exit
+history -c
