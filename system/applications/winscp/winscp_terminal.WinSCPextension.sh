@@ -19,14 +19,14 @@
 #
 #! /usr/bin/env bash
 #
-winscp_to_bash "$1" "$2" "$3" "$4" "$5" "$6"
+winscp_to_bash "${@}"
 #
-openssh_known_hosts "$port" "$hostname"
+openssh_known_hosts "${port}" "${hostname}"
 #
-[[ -n "$7" && "$7" = 'yes' ]] && cd "$local_dir" || :
+[[ -n "${7}" && "${7}" = 'yes' ]] && cd "${local_dir}"
 #
 export set CHERE_INVOKING=1
 #
 bash -li
 #
-exit
+history -c
