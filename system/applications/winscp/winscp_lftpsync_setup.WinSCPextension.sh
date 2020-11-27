@@ -62,7 +62,7 @@ if [[ "${12}" = 'reset' ]]; then
 	echo "The lftpsync script has been reset to defaults and the scheduled task has been removed."
 	sleep 2
 else
-	winscp_to_bash "$1" "$2" "$3" "$4" "$5" "$6"
+	winscp_to_bash "${@}"
 	#
 	sed -ri "s|^username='(.*)'$|username='$username'|g" /scripts/lftpsync-config.sh
 	sed -ri "s|^hostname='(.*)'$|hostname='$hostname'|g" /scripts/lftpsync-config.sh
@@ -84,4 +84,4 @@ if [[ "${13}" = 'openlftpsync' ]]; then
 	"/applications/notepad/notepad++.exe" "$(cygpath -m /scripts/lftpsync-config.sh)"
 fi
 #
-exit
+history -c

@@ -17,8 +17,6 @@
 #
 # @option TITLE -run textbox "Windows title!" "!\"
 #
-#! /usr/bin/env bash
-#
 winscp_to_bash "${@}"
 #
 openssh_known_hosts "${port}" "${hostname}"
