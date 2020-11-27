@@ -34,7 +34,7 @@ lftp_conf_override
 lock_file="/tmp/lftp-winscp.lock"
 #
 # This checks to see if LFTP is actually running and if the lock file exists. It LFTP is not running and there is a lock file it will be automatically cleared allowing the script to run.
-[[ -z "$(ps | grep /usr/bin/lftp | awk '{print $1}')" ]] && rm -f "$lock_file"
+[[ -z "$(ps | grep /usr/bin/lftp | awk '{print $1}')" ]] && rm -f "${lock_file}"
 #
 if [[ -f "${lock_file}" ]]; then
 	echo "An lftp job is already running already."
