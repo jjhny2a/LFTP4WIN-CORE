@@ -1,9 +1,9 @@
-# To the extent possible under law, the author(s) have dedicated all 
-# copyright and related and neighboring rights to this software to the 
-# public domain worldwide. This software is distributed without any warranty. 
-# You should have received a copy of the CC0 Public Domain Dedication along 
-# with this software. 
-# If not, see <http://creativecommons.org/publicdomain/zero/1.0/>. 
+# To the extent possible under law, the author(s) have dedicated all
+# copyright and related and neighboring rights to this software to the
+# public domain worldwide. This software is distributed without any warranty.
+# You should have received a copy of the CC0 Public Domain Dedication along
+# with this software.
+# If not, see <http://creativecommons.org/publicdomain/zero/1.0/>.
 
 # base-files version 4.3-2
 
@@ -37,14 +37,17 @@ PS1='\[\e]0;\w\a\]\n\[\e[32m\]\u@\h \[\e[33m\]\w\[\e[0m\]\n\$ '
 PATH=/usr/local/bin:/usr/bin
 #
 # Set PATH so it includes user's private bin if it exists
-if [[ -d "${HOME}/bin" ]] ; then
-  PATH="${HOME}/bin${PATH:+:${PATH}}"
+if [[ -d "${HOME}/bin" ]]; then
+	PATH="${HOME}/bin${PATH:+:${PATH}}"
 fi
+#
+export HISTCONTROL=$HISTCONTROL:ignoredups
+#
 # Our custom PS1 prompt
 PS1="\[\033[0;36m\][\[\033[0;31m\]\w\[\033[0;36m\]] \[\033[0m\]"
 # Source the notifications script.
 if [[ -f "/etc/notifications" ]]; then
-source "/etc/notifications"
+	source "/etc/notifications"
 fi
 #
 # The pushover message script.
@@ -56,7 +59,7 @@ pushover() {
 #
 # The pushbullet message script.
 pushbullet() {
-    if [[ -n "$pushbullet_api_key" ]]; then
+	if [[ -n "$pushbullet_api_key" ]]; then
 		curl -4u ''"$pushbullet_api_key"':' 'https://api.pushbullet.com/v2/pushes' -d type="note" -d title="lftp-windows" -d body="Your transfer has finished $1" > /dev/null 2>&1 || :
 	fi
 }

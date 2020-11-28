@@ -60,8 +60,5 @@ echo | tee -a "${HOME}/../help/reports/report-${hostname}.txt"
 read -ep "Are you ready to close the terminals?: " -i "y" quitme
 #
 if [[ "${quitme}" =~ ^[Yy]$ ]]; then
-	history -c
 	exit
 fi
-#
-history -c

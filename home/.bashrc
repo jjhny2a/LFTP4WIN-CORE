@@ -184,5 +184,3 @@
 # }
 #
 # alias cd=cd_func
-#
-export HISTCONTROL=$HISTCONTROL:ignoredups

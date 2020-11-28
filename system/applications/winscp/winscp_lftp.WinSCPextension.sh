@@ -18,5 +18,3 @@ openssh_known_hosts "${port}" "${hostname}"
 cd "${local_dir}"
 #
 lftp -p "${port}" -u "${username},${password}" "${protocol}://${hostname}" -e "cd \"${remote_dir}\"; cls -1aB"
-#
-history -c

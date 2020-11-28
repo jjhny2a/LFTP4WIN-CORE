@@ -72,5 +72,3 @@ else
 	pushbullet "@ $(date '+%H:%M:%S')"
 	pushover "@ $(date '+%H:%M:%S')"
 fi
-#
-history -c

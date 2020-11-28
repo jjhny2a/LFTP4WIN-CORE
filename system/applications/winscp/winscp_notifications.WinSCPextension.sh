@@ -46,5 +46,3 @@ fi
 if [[ "${5}" = 'openotifications' ]]; then
 	"/applications/notepad/notepad++.exe" "$(cygpath -m /etc/notifications)"
 fi
-#
-history -c

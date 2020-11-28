@@ -50,5 +50,3 @@ fi
 if [[ "${7}" = 'openlftpconfoverride' ]]; then
 	"/applications/notepad/notepad++.exe" "$(cygpath -m /scripts/lftp-conf-override.sh)"
 fi
-#
-history -c

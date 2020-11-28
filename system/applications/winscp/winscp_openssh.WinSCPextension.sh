@@ -34,5 +34,3 @@ cd "${local_dir}"
 [[ -n "${8}" && "${8}" = 'yes' ]] && CDREMOTE="cd '${remote_dir}'; bash -li" || CDREMOTE=""
 #
 sshpass -e ssh -qt "${DYNAMIC}" -p "${port}" "${username}@${hostname}" "${CDREMOTE}"
-#
-history -c

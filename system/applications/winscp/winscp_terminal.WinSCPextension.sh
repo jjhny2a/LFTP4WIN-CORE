@@ -26,5 +26,3 @@ openssh_known_hosts "${port}" "${hostname}"
 export set CHERE_INVOKING=1
 #
 bash -li
-#
-history -c

@@ -83,5 +83,3 @@ fi
 if [[ "${13}" = 'openlftpsync' ]]; then
 	"/applications/notepad/notepad++.exe" "$(cygpath -m /scripts/lftpsync-config.sh)"
 fi
-#
-history -c
