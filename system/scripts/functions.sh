@@ -1,6 +1,6 @@
 # A function that performs some useful commands upon the script exiting.
 #
-ssh_pageant_random=$RANDOM
+export ssh_pageant_random="${RANDOM}"
 #
 function openssh_known_hosts() {
 	# Make sure this folder exists. If it does not, then create it to prevent errors in the function.
