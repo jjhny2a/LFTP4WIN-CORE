@@ -32,7 +32,7 @@ function finish() {
 #
 function ssh_pageant() {
 	# ssh-pageant is loaded so that lftp can use our putty ppk keyfile for auth so we can use a single keyfile.
-	[[ -z "$(pgrep ssh-pageant)" ]] && eval "$(ssh-pageant -q -a "/tmp/AUTH-LFTP4WIN-${ssh_pageant_random}")"
+	eval "$(ssh-pageant -q -a "/tmp/AUTH-LFTP4WIN-${ssh_pageant_random}")"
 	#
 }
 #
