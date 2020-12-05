@@ -31,6 +31,6 @@ export SSHPASS="${password}"
 cd "${local_dir}"
 #
 [[ -n "${7}" ]] && DYNAMIC="-D ${7}" || DYNAMIC=""
-[[ -n "${8}" && "${8}" = 'yes' ]] && CDREMOTE="cd '${remote_dir}'; bash -li" || CDREMOTE=""
+[[ -n "${8}" && "${8}" = 'yes' ]] && CDREMOTE="cd '${remote_dir}'; [[ \$(source /etc/os-release && echo \$ID) = alpine ]] && ash || bash" || CDREMOTE=""
 #
 sshpass -e ssh -qt "${DYNAMIC}" -p "${port}" "${username}@${hostname}" "${CDREMOTE}"
