@@ -55,9 +55,9 @@ else
 	touch "${lock_file}"
 	# the lftp command we use followed by the hardcoded settings - these variables are either set above or passed by WinSCP using the custom commands.
 	lftp -p "${port}" -u ''"${username}"','"${password}"'' "${protocol}://${hostname}" <<- EOF
-		set mirror:parallel-transfer-count "$mirror_parallel_transfer_count"
-		set mirror:use-pget-n "$mirror_use_pget_n"
-		mirror $mirror_args "$remote_dir" "$local_dir"
+		set mirror:parallel-transfer-count "${mirror_parallel_transfer_count}"
+		set mirror:use-pget-n "${mirror_use_pget_n}"
+		mirror ${mirror_args} "${remote_dir}" "${local_dir}"
 		quit
 	EOF
 	#

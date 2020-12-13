@@ -55,8 +55,8 @@ else
 	touch "${lock_file}"
 	# the lftp command we use followed by the hardcoded settings - these variables are either set above or passed by WinSCP using the custom commands.
 	lftp -p "$port" -u ''"${username}"','"${password}"'' "${protocol}://${hostname}" <<- EOF
-		set pget:default-n "$pget_default_n"
-		pget $pget_args "$remote_dir" -o "$local_dir"
+		set pget:default-n "${pget_default_n}"
+		pget ${pget_args} "${remote_dir}" -o "${local_dir}"
 		quit
 	EOF
 	#
