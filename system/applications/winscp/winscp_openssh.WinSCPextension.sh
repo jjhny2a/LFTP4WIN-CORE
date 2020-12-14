@@ -33,4 +33,4 @@ cd "${local_dir}"
 [[ -n "${7}" ]] && DYNAMIC="-D ${7}" || DYNAMIC=""
 [[ -n "${8}" && "${8}" = 'yes' ]] && REMOTE_CMD="cd '${remote_dir}';[[ \"\$SHELL\" == '/bin/ash' ]] && ash -i || bash -li" || REMOTE_CMD="[[ \"\$SHELL\" == '/bin/ash' ]] && ash -i || bash -li"
 #
-sshpass -e ssh -qt "${DYNAMIC}" -p "${port}" "${username}@${hostname}" "${REMOTE_CMD}"
+sshpass -e ssh -qt ${DYNAMIC} -p "${port}" "${username}@${hostname}" "${REMOTE_CMD}"
