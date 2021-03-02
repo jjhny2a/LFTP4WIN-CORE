@@ -330,7 +330,7 @@
       "en": "Don't forget to update Jump Lists, especially if ‘Autoupdate’ is unchecked",
       "ru": "Не забудьте обновить список переходов, особенно если опция ‘Сразу’ отключена",
       "zh": "别忘了更新快速跳转列表，尤其是当“自动更新”未选中时",
-      "de": "Vergiss nicht Sprungbefehle zu aktualisieren, besonders wenn 'Autoupdate' abgewählt ist",
+      "de": "Vergessen Sie nicht die Sprungliste zu aktualisieren. Insbesondere, wenn 'Auto-Update' abgewählt ist",
       "ja": "ジャンプリストを更新することを忘れないでください.特に, '自動更新' がチェックされていない場合",
       "es": "No olvides actualizar la Lista de Tareas, especialmente si no está activado 'Autoactualizar'",
       "pl": "Nie zapomnij zaktualizować list szybkiego dostępu, zwłaszcza jeśli „Autoupdate” nie jest zaznaczone",
@@ -512,6 +512,9 @@
       "zh": [ "如果可能，尝试擦除选择的区域\r\n"
             , "由发送系列的 Del/BS 键至控制台。\r\n"
             , "实现“通常意义的”热键 Ctrl+X、Shift+Del、BS 和 Del。" ],
+      "de": [ "Ausgewählten Bereich, wenn möglich, löschen,\n"
+            , "indem Entf-/Rücktaste an die Konsole gesendet wird.\n"
+            , "Aktiviert die \"üblichen\" Kürzel Strg+X, Shift+Entf, Zurück und Entf." ],
       "ja": [ "可能であれば選択範囲を消去する\r\n"
             , "Del か BS のシーケンスをコンソールに掲示することにより,\r\n"
             , "Ctrl+X, Shift+Del, BS か Del の '通常の' ホットキーを実装します." ],
@@ -1977,7 +1980,7 @@
       "pl": [ "Użyj klinknięcia, aby rozszerzyć wiersz polecenia (cmd.exe)\n"
             , "https://chrisant996.github.io/clink/" ],
       "it_IT": [ "Utilizzare clink per estendere il prompt dei comandi (cmd.exe)\r\n"
-            , "https://mridgers.github.io/clink/" ],
+            , "https://chrisant996.github.io/clink/" ],
       "id": 2418 }
     ,
     "cbUseInjects": {
@@ -3030,7 +3033,7 @@
       "zh": [ "这允许在设置页面所有控件中搜索指定文本\r\n"
             , "单击“缩放”图标或按“回车”继续搜索" ],
       "de": [ "Ermöglicht alle Steuerungen in den Setup-Seiten nach dem angegebenen Text zu durchsuchen\r\n"
-            , "'Lupe'-Symbol anklicken oder 'Enter' drücken um Suche fortzusetzen" ],
+            , "'Lupe'-Symbol anklicken oder 'Enter' drücken, um Suche fortzusetzen" ],
       "ja": [ "これにより,指定されたテキストのすべての設定ページコントロールを検索することができます\r\n"
             , "[ズーム]アイコンをクリックするか,[Enter]を押して検索を続行します." ],
       "es": [ "Permite buscar un texto en los controles de las páginas de configuración\r\n"
@@ -3099,8 +3102,8 @@
             , "Анимация работает только тогда, когда заголовок окна скрыт." ],
       "zh": [ "窗口动画的持续时间（0..2000ms）：以 Quake 风格下滑/上滑和恢复/隐藏窗口至任务栏状态区域（TSA）。\r\n"
             , "动画只在窗口标题隐藏时有效。" ],
-      "de": [ "Dauer der Fensteranimation (0..2000ms): Quake-artiges Herein-/Herausgleiten und Wiederherstellen/Verbergen in den Infobereich\r\n"
-            , "Die Animation funktioniert nur wenn der Fenstertitel verborgen wurde." ],
+      "de": [ "Dauer der Fensteranimation (0..2000ms): Ein-/Ausblenden im Quake-Modus und Wiederherstellen/Verbergen in den Infobereich\r\n"
+            , "Die Animation funktioniert nur, wenn die Titelleiste abgeschaltet ist." ],
       "ja": [ "ウィンドウアニメーションの持続時間(0.0001ms):スライドを上下に動かし,ウインドウをTSAに復元/隠す.\r\n"
             , "アニメーションは,ウィンドウのキャプションが隠されている場合にのみ機能します." ],
       "es": [ "Duración de la animación de la ventana (0..2000ms): deslizamiento en modo Quake y restauración/ocultación de ventana a la zona de notificaciones.\r\n"
@@ -3844,7 +3847,7 @@
       "en": "Check for updates",
       "ru": "Проверка обновлений",
       "zh": "检查更新",
-      "de": "Nach Aktualisierungen suchen",
+      "de": "Nach neuer Version suchen",
       "ja": "アップデートを確認",
       "es": "Comprobar actualizaciones",
       "pl": "Sprawdź aktualizacje",
@@ -3948,6 +3951,7 @@
       "ja": "ConEmuからアクティブなRealConsoleを切り離す",
       "es": "Desanclar el terminal real activo de ConEmu",
       "pl": "Odłącz aktywną RealConsole od ConEmu",
+      "it_IT": "Scollega console Reale attiva da ConEmu",
       "id": 2839 }
     ,
     "vkConsole_1": {
@@ -4521,7 +4525,7 @@
       "ja": "可能であれば,TEXTフルスクリーンモードにします.そうでない場合 - 標準フルスクリーンと常に上に",
       "es": "Pasar a modo de TEXTO de pantalla completa, cuando esté disponible. Si no - modo de pantalla completa estándar y siempre en primer plano",
       "pl": "Przejdź do trybu pełnoekranowego TEXT, jeśli jest dostępny. Jeśli nie - standardowy pełny ekran i zawsze na wierzchu",
-      "it_IT": "Abilita modalità tutto schermo testuale, quando disponibile. Altrimenti modalità tutto schermo normale.",
+      "it_IT": "Abilita modalità tutto schermo testuale, quando disponibile. Altrimenti modalità tutto schermo normale",
       "id": 2260 }
     ,
     "vkGlobalRestore": {
@@ -5362,7 +5366,7 @@
       "en": "Setup ‘Hotkeys’",
       "ru": "Настроить ‘Горячие клавиши’",
       "zh": "注册 ‘热键’",
-      "de": "Einrichtung 'Schnelltasten'",
+      "de": "Einrichtung 'Kürzel'",
       "ja": "セットアップ 'ホットキー'",
       "es": "Configurar 'Combinaciones'",
       "pl": "Skonfiguruj \"Klawisze skrótów\"",
@@ -5458,6 +5462,7 @@
       "ja": "RealConsoleを表示してConEmuから切り離す",
       "es": "Mostrar la Terminal-Real y desanclarla de ConEmu",
       "pl": "Pokaż RealConsole i odłącz go od ConEmu",
+      "it_IT": "Mostra la console Reale e scollegala da ConEmu",
       "id": 43993 }
     ,
     "IDM_DONATE_LINK": {
@@ -5580,7 +5585,7 @@
       "ja": "アクティブなコンソール/ペイン:ルートプロセス以外のすべてを終了する(kill)",
       "es": "Terminal/panel activo: finalizar (matar) todos excepto los procesos 'root'",
       "pl": "Aktywna konsola / panel: Zakończ (zabij) wszystkie oprócz procesu rootowania",
-      "it_IT": "Console/riquadro attivo: Forza chiusura di tutto tranne processi root",
+      "it_IT": "Console/riquadro attivo: Forza chiusura di tutto tranne processo root",
       "id": 43991 }
     ,
     "IDM_TERMINATECON": {
@@ -5624,7 +5629,7 @@
       "ja": "アクティブなコンソール/ペイン:アクティブなプロセスを終了する(kill)",
       "es": "Terminal/panel activo: finalizar (matar) proceso activo",
       "pl": "Aktywna konsola / panel: Zakończ (zabij) aktywny proces",
-      "it_IT": "Console/riquadro attivo: Forza chiusura processi attivo (kill)",
+      "it_IT": "Console/riquadro attivo: Forza chiusura processo attivo",
       "id": 43988 }
     ,
     "IDM_TERMINATEPRCGROUP": {
@@ -5689,7 +5694,7 @@
       "en": "Type ANSI code point using decimal numbers",
       "ru": "Введите десятичный код ANSI",
       "zh": "使用十进制数字输入 ANSI 代码点",
-      "de": "ANSI-Codepoint unter Verwendung dezimaler Zahlen eingeben",
+      "de": "ANSI-Code-Punkte unter Verwendung dezimaler Zahlen eingeben",
       "ja": "10進数を使用してANSIコードポイントを入力",
       "es": "Teclear código ANSI usando números decimales.",
       "pl": "Wpisz punkt kodowy ANSI, używając liczb dziesiętnych",
@@ -5720,7 +5725,7 @@
       "en": " - release <Alt> to paste ANSI code point",
       "ru": " - отпустите <Alt> для вставки ANSI-символа",
       "zh": " - 释放 <Alt> 键粘贴 ANSI 代码点",
-      "de": " - <Alt> loslassen um ANSI-Codepoint einzufügen",
+      "de": " - <Alt> loslassen um ANSI-Code-Punkt einzufügen",
       "ja": "  -  <Alt>を離してANSIコードポイントを貼り付けます",
       "es": " - suelta <Alt> para pegar código ANSI",
       "pl": "wydanie <Alt> wkleić punkt kodowy ANSI",
@@ -5750,7 +5755,7 @@
       "en": "Press <Cancel> to continue your work.",
       "ru": "Нажмите <Отмена> для продолжения работы.",
       "zh": "按下<Cancel>以继续你的工作。",
-      "de": "<Abbrechen> drücken um mit der Arbeit fortzufahren",
+      "de": "<Abbrechen> klicken, um mit der Arbeit fortzufahren",
       "ja": "<Cancel>を押して作業を続行します.",
       "es": "Pulsar <Cancel> para continuar tu trabajo.",
       "pl": "Naciśnij <Cancel> aby kontynuować pracę.",
@@ -5763,7 +5768,7 @@
             , "и сообщить об ошибке (открыть веб-страницу проекта)." ],
       "zh": [ "按下<重试>复制文本信息至剪贴板\r\n"
             , "并报告 bug（打开项目网页）。" ],
-      "de": [ "<Wiederholen> drücken um die Textinformationen in die Zwischenablage zu kopieren\r\n"
+      "de": [ "<Wiederholen> klicken, um die Textinformationen in die Zwischenablage zu kopieren\r\n"
             , "und einen Fehler zu melden (öffnet Projekt-Website)." ],
       "ja": [ "テキスト情報をクリップボードにコピーするには<Retry>を押します\r\n"
             , "バグ(オープンプロジェクトのWebページ)を報告します." ],
@@ -5880,6 +5885,7 @@
       "en": "Confirm closing Far editor?",
       "ru": "Подтвердить закрытие редактора Far?",
       "zh": "同意关闭 Far 编辑器？",
+      "de": "Soll der FAR-Editor geschlossen werden?",
       "pl": "Potwierdź zamknięcie edytora Far?",
       "it_IT": "Conferma chiusura di editor Far?",
       "id": 184 }
@@ -5888,6 +5894,7 @@
       "en": "Confirm closing group?",
       "ru": "Подтвердить закрытие группы?",
       "zh": "同意关闭？",
+      "de": "Soll die Gruppe geschlossen werden?",
       "pl": "Potwierdzić zamykającą grupę?",
       "it_IT": "Conferma chiusura gruppo?",
       "id": 187 }
@@ -5896,6 +5903,7 @@
       "en": "Confirm closing Far viewer?",
       "ru": "Подтвердить закрытие Far viewer?",
       "zh": "同意关闭 Far 浏览器？",
+      "de": "Soll der FAR-Viewer geschlossen werden?",
       "pl": "Potwierdzić zamknięcie przeglądarki Far?",
       "it_IT": "Conferma chiusura di visualizzatore Far?",
       "id": 185 }
@@ -5904,6 +5912,7 @@
       "en": "Confirm closing?",
       "ru": "Подтвердить закрытие?",
       "zh": "同意关闭？",
+      "de": "Soll ConEmu geschlossen werden?",
       "pl": "Potwierdzasz zamknięcie?",
       "it_IT": "Conferma chiusura?",
       "id": 188 }
@@ -5912,6 +5921,7 @@
       "en": "Don't close anything",
       "ru": "Ничего не закрывать",
       "zh": "不关闭任何东西",
+      "de": "Nichts schließen",
       "pl": "Nie zamykaj niczego",
       "it_IT": "Non chiudere nulla",
       "id": 189 }
@@ -5920,6 +5930,7 @@
       "en": "Incomplete operations",
       "ru": "Незавершенные операции",
       "zh": "不完整的操作",
+      "de": "Noch nicht beendete Prozesse",
       "pl": "Niekompletne operacje",
       "it_IT": "Operazioni non complete",
       "id": 179 }
@@ -5943,6 +5954,7 @@
       "en": "Unsaved editor windows",
       "ru": "Несохраненные окна редактора",
       "zh": "编辑窗口没有保存",
+      "de": "Editor-Fenster mit nicht gespeicherten Änderungen",
       "pl": "Niezapisane okna edytora",
       "it_IT": "Finestre editor non salvate",
       "id": 180 }
@@ -6221,6 +6233,7 @@
       "en": "&About / Help",
       "ru": "О программе / Помощь",
       "zh": "关于（&a）/ 帮助",
+      "de": "Ü&ber / Hilfe",
       "pl": "& Informacje / Pomoc",
       "it_IT": "Informazioni / &Aiuto",
       "id": 138 }
@@ -6329,6 +6342,7 @@
       "en": "Cop&y",
       "ru": "Копировать",
       "zh": "复制（&y）",
+      "de": "&Kopieren",
       "pl": "Kopiu&j",
       "id": 119 }
     ,
@@ -6336,6 +6350,7 @@
       "en": "Copy &all",
       "ru": "Копировать все",
       "zh": "复制全部（&a）",
+      "de": "&Alles kopieren",
       "pl": "Kopiuj &wszystko",
       "it_IT": "Copi&a tutto",
       "id": 120 }
@@ -6344,6 +6359,7 @@
       "en": "Plain &text only",
       "ru": "Только обычный текст",
       "zh": "纯文字（&t）",
+      "de": "Nur &Text",
       "pl": "Zwykły &tylko tekst",
       "it_IT": "Solo &testo semplice",
       "id": 123 }
@@ -6352,6 +6368,7 @@
       "en": "Copy &HTML format",
       "ru": "Копировать в HTML-формате",
       "zh": "复制 &HTML 格式",
+      "de": "Im &HTML-Format kopieren",
       "pl": "Kopiuj &Format HTML",
       "it_IT": "Copia formato &HTML",
       "id": 124 }
@@ -6360,6 +6377,7 @@
       "en": "Copy a&s HTML",
       "ru": "Копировать как HTML",
       "zh": "复制成 HTML（&s）",
+      "de": "Al&s HTML-Quelltext kopieren",
       "pl": "Kopiuj plik& HTML",
       "it_IT": "Copia co&me HTML",
       "id": 125 }
@@ -6368,6 +6386,7 @@
       "en": "A&NSI sequences",
       "ru": "Последовательности ANSI",
       "zh": "A&NSI 序列",
+      "de": "Text mit A&NSI-Sequenzen",
       "pl": "A&NSI sekwencje",
       "it_IT": "Sequenze A&NSI",
       "id": 126 }
@@ -6376,6 +6395,7 @@
       "en": "&Find text...",
       "ru": "Найти текст...",
       "zh": "搜索（&f）",
+      "de": "Text s&uchen...",
       "pl": "&Znajdź tekst...",
       "id": 127 }
     ,
@@ -6383,6 +6403,7 @@
       "en": "Mark &block",
       "ru": "Отметить блок",
       "zh": "标记块（&b）",
+      "de": "&Bereich markieren",
       "pl": "Zaznacz &zablokuj",
       "id": 117 }
     ,
@@ -6390,6 +6411,7 @@
       "en": "Mar&k text",
       "ru": "Отметить текст",
       "zh": "标记文字（&k）",
+      "de": "Text mar&kieren",
       "pl": "Zaznacz tekst",
       "id": 118 }
     ,
@@ -6397,6 +6419,7 @@
       "en": "&Paste",
       "ru": "Вставить",
       "zh": "粘贴（&p）",
+      "de": "&Einfügen",
       "pl": "&Wklej",
       "it_IT": "&Incolla",
       "id": 121 }
@@ -6405,6 +6428,7 @@
       "en": "&Properties...",
       "ru": "Свойства...",
       "zh": "属性（&p）",
+      "de": "&Fenster-Eigenschaften...",
       "pl": "&Posiadłość",
       "it_IT": "&Proprietà...",
       "id": 160 }
@@ -6431,6 +6455,7 @@
       "en": "Show assertion",
       "ru": "Показать утверждение",
       "zh": "显示断言",
+      "de": "Fehlermeldung anzeigen",
       "pl": "Pokaż potwierdzenie",
       "id": 168 }
     ,
@@ -6454,6 +6479,7 @@
       "en": "Raise exception (Main thread)",
       "ru": "Вызвать исключение (основной поток)",
       "zh": "引起异常（主要线程）",
+      "de": "Ausnahmefehler auslösen (Main thread)",
       "pl": "Zgłoś wyjątek (Główny wątek)",
       "id": 166 }
     ,
@@ -6461,6 +6487,7 @@
       "en": "Raise exception (Monitor thread)",
       "ru": "Вызвать исключение (поток монитора)",
       "zh": "引起异常（监控线程）",
+      "de": "Ausnahmefehler auslösen (Monitor thread)",
       "pl": "Podnieś wyjątek (wątek monitora)",
       "id": 167 }
     ,
@@ -6470,12 +6497,14 @@
       "zh": "分离",
       "de": "Abkoppeln (als Konsolenfenster)",
       "pl": "Odłączyć",
+      "it_IT": "Scollega",
       "id": 99 }
     ,
     "lng_MenuDonateLink": {
       "en": "&Donate ConEmu",
       "ru": "Пожертвовать ConEmu",
       "zh": "捐献",
+      "de": "Für ConEmu spen&den",
       "pl": "&Dotacja ConEmu",
       "it_IT": "&Dona a ConEmu",
       "id": 131 }
@@ -6484,6 +6513,7 @@
       "en": "&Dump screen...",
       "ru": "Дамп экрана...",
       "zh": "转储屏幕(&D)...",
+      "de": "Konsolen&inhalt speichern...",
       "pl": "&Zrzut ekranu...",
       "id": 162 }
     ,
@@ -6499,12 +6529,14 @@
       "zh": "复制根进程(&T)...",
       "de": "Reiter duplizieren...",
       "pl": "Duplikuj & root...",
+      "it_IT": "Radice duplica&te...",
       "id": 101 }
     ,
     "lng_MenuHelp": {
       "en": "&Help",
       "ru": "Помощь",
       "zh": "帮助",
+      "de": "&Hilfe",
       "pl": "&Wsparcie",
       "it_IT": "&Aiuto",
       "id": 135 }
@@ -6522,6 +6554,7 @@
       "en": "&Visit home page",
       "ru": "Посетить домашнюю страницу",
       "zh": "访问主页",
+      "de": "&Webseite besuchen",
       "pl": "&Odwiedź stronę główną",
       "it_IT": "&Visita home page",
       "id": 130 }
@@ -6530,6 +6563,7 @@
       "en": "Hot&keys",
       "ru": "Горячие клавиши",
       "zh": "热键",
+      "de": "Tasten&kürzel",
       "pl": "Klawisze skrótu",
       "it_IT": "Combinazione &tasti",
       "id": 136 }
@@ -6538,6 +6572,7 @@
       "en": "&Load screen dump...",
       "ru": "Загрузить дамп экрана...",
       "zh": "载入屏幕转储(&L)...",
+      "de": "Konsoleninhalt &laden...",
       "pl": "&Wczytaj zrzut ekranu",
       "id": 163 }
     ,
@@ -6578,6 +6613,7 @@
       "en": "Online &Help",
       "ru": "Онлайн помощь",
       "zh": "在线帮助",
+      "de": "Online-&Hilfe",
       "pl": "Pomoc &online",
       "it_IT": "Aiuto &Online",
       "id": 137 }
@@ -6613,6 +6649,7 @@
       "en": "Ed&it",
       "ru": "Редактировать",
       "zh": "离开",
+      "de": "Bearbe&iten",
       "pl": "Edytuj",
       "it_IT": "Mod&ifica",
       "id": 142 }
@@ -6631,6 +6668,7 @@
       "zh": "查看（调色板）",
       "de": "Aussehen (Farbschema)",
       "pl": "Widok (palety)",
+      "it_IT": "&Vista (palette)",
       "id": 143 }
     ,
     "lng_MenuPopupRestart": {
@@ -6639,6 +6677,7 @@
       "zh": "重启或重置",
       "de": "Neu sta&rten und duplizieren",
       "pl": "Uruchom ponownie lub zduplikuj",
+      "it_IT": "&Riavvia o duplica",
       "id": 112 }
     ,
     "lng_MenuPopupSysDebug": {
@@ -6759,6 +6798,7 @@
       "zh": "向下拆分(&B)",
       "de": "&Horizontal teilen",
       "pl": "Podziel na dół",
+      "it_IT": "Dividi in &basso",
       "id": 103 }
     ,
     "lng_MenuSplit2Right": {
@@ -6767,12 +6807,14 @@
       "zh": "向右拆分(&G)",
       "de": "&Vertikal teilen",
       "pl": "Podziel na prawy",
+      "it_IT": "Dividi a &destra",
       "id": 102 }
     ,
     "lng_MenuStopUpdate": {
       "en": "&Stop updates checking",
       "ru": "Остановить проверку обновлений",
       "zh": "停止检查更新",
+      "de": "Prüfung auf neue Ver&sion beenden",
       "pl": "Zatrzymaj sprawdzanie aktualizacji",
       "id": 128 }
     ,
@@ -6814,6 +6856,7 @@
       "zh": "终止除根进程外所有进程",
       "de": "Alle bis auf die Shell-Prozess beenden",
       "pl": "Zabij wszystkich oprócz powłoki",
+      "it_IT": "Forza chiusura di tutto tranne &shell",
       "id": 92 }
     ,
     "lng_MenuTerminateCon": {
@@ -6849,6 +6892,7 @@
       "zh": "杀掉活动的进程",
       "de": "&Aktiven Prozess beenden",
       "pl": "Zabij i aktywuj proces",
+      "it_IT": "Forza chiusura processo &attivo",
       "id": 91 }
     ,
     "lng_MenuTerminatePrcGroup": {
@@ -6857,6 +6901,7 @@
       "zh": "杀掉活动的进程",
       "de": "Prozesse der &aktiven Gruppe beenden",
       "pl": "Zabij aktywne procesy",
+      "it_IT": "Forza chiusura &processi attivi",
       "id": 94 }
     ,
     "lng_MenuTerminateZombies": {
@@ -6878,7 +6923,7 @@
       "en": "Whats &new (local)",
       "ru": "Что нового",
       "zh": "更新说明（本地）",
-      "de": "Was ist &neu (lokal)",
+      "de": "Was gibt's &Neues (lokal)",
       "pl": "Co nowego (lokalne)",
       "it_IT": "&Novità (locale)",
       "id": 132 }
@@ -6887,6 +6932,7 @@
       "en": "Whats new (&web)",
       "ru": "Что нового (в Интернете)",
       "zh": "更新说明（网页）",
+      "de": "Was gibt's Neues (&Web)",
       "pl": "Co nowego (web)",
       "it_IT": "Novità (&web)",
       "id": 133 }
@@ -7173,7 +7219,7 @@
       "en": "ANSI execution",
       "ru": "Выполнение ANSI",
       "zh": "ANSI 转义序列",
-      "de": "ANSI-Ausführung",
+      "de": "ANSI-Code ausführen",
       "ja": "ANSI実行",
       "es": "Ejecución ANSI",
       "pl": "ANSI wykonanie",
@@ -7503,7 +7549,7 @@
       "en": "Tab bar",
       "ru": "Панель табов",
       "zh": "标签栏",
-      "de": "Reiter-Leiste",
+      "de": "Reiterleiste",
       "ja": "タブバー",
       "es": "Pestañas",
       "pl": "Pasek kart",
@@ -7567,7 +7613,7 @@
       "en": "Visit website to get thorough switches description:",
       "ru": "Посетите веб-страницу с подробным описанием ключей:",
       "zh": "访问网站，以获得更详尽的命令行开关使用介绍：",
-      "de": "Website besuchen um die Argumentebeschreibung einzusehen:",
+      "de": "Website besuchen, um Informationen zu Parametern zu erhalten:",
       "ja": "徹底的なスイッチの説明を取得するにはウェブサイトをご覧ください",
       "es": "Visitar el sitio web para obtener una descripción detallada de las opciones:",
       "pl": "Odwiedź stronę internetową, aby uzyskać dokładny opis przełączników:",
@@ -7756,7 +7802,7 @@
       "en": "Reload...",
       "ru": "Перечитать...",
       "zh": "重新加载...",
-      "de": "Neuladen...",
+      "de": "Neu laden...",
       "ja": "再読込み...",
       "es": "Recargar...",
       "pl": "Przeładuj...",
@@ -7909,6 +7955,7 @@
       "en": "Log ANSI sequences (*)",
       "ru": "Журнал ANSI последовательности (*)",
       "zh": "记录 ANSI 序列 (*)",
+      "de": "ANSI-Sequenzen protokollieren (*)",
       "es": "Registrar secuencias ANSI (*)",
       "pl": "Rejestruj sekwencje ANSI (*)",
       "it_IT": "Log sequenze ANSI (*)",
@@ -7929,7 +7976,7 @@
       "en": "Reload...",
       "ru": "Перечитать...",
       "zh": "重载...",
-      "de": "Neu Laden...",
+      "de": "Neu laden...",
       "ja": "再読込...",
       "es": "Recargar...",
       "pl": "Przeładuj...",
@@ -7984,6 +8031,7 @@
       "en": "Reload environment variables automatically",
       "ru": "Автоматически обновлять переменные окружения",
       "zh": "自动重新加载环境变量",
+      "de": "Umgebungsvariablen automatisch neu laden",
       "es": "Recargar variables de entorno automáticamente",
       "pl": "Załaduj automatycznie zmienne środowiskowe",
       "it_IT": "Ricarica variabili d'ambiente automaticamente",
@@ -7993,7 +8041,7 @@
       "en": "Auto save window size and position on exit",
       "ru": "Запоминать размер и положение окна при выходе",
       "zh": "退出时自动保存窗口大小和位置",
-      "de": "Fenstergröße und Position beim Verlassen automatisch speichern",
+      "de": "Größe und Position beim Beenden speichern",
       "ja": "終了時にウィンドウのサイズと位置を自動的に保存",
       "es": "Auto guardar el tamaño y posición de la ventana al salir",
       "pl": "Auto-zapis rozmiaru okna przy wyjściu",
@@ -8013,7 +8061,7 @@
       "en": "Allow background plugins (Far Manager)",
       "ru": "Разрешить фоновые плагины (Far)",
       "zh": "允许背景插件（Far Manager）",
-      "de": "Erlaube Hintergrund-PlugIns (Far-Manager)",
+      "de": "PlugIns für Hintergrund (Far Manager)",
       "ja": "バックグラウンドプラグインを許可(Far Manager)",
       "es": "Permitir plugins de fondo (Far Manager)",
       "pl": "Zezwalaj na wtyczki w tle (Far Manager)",
@@ -8076,7 +8124,7 @@
       "en": "Quit on close (e.g. caption bar cross clicking)",
       "ru": "Выйти при закрытии (например. щелчком на заголовке)",
       "zh": "关闭时退出程序 （比如 标题栏点击叉号）",
-      "de": "Beim Schließen beenden (z.B. Klick auf Titelleisten-X)",
+      "de": "Beim Beenden schließen (z.B. Schließen-Schaltfläche)",
       "ja": "閉じると終了(例:キャプションバーの[x]ボタン).",
       "es": "Finalizar al cerrar (ej.: pulsar en la X de la barra de título)",
       "pl": "Wyjdź po zamknięciu (np. Krzyżowe kliknięcie paska podpisu)",
@@ -8097,7 +8145,7 @@
       "en": "Confirm tab closing",
       "ru": "Подтверждение закрытия вкладки",
       "zh": "确认标签关闭",
-      "de": "Rückfrage beim Schließen von Reitern",
+      "de": "Schließen von Reitern bestätigen",
       "ja": "タブを閉じる時に確認する",
       "es": "Confirmar cierre de pestañas",
       "pl": "Potwierdź zamknięcie karty",
@@ -8108,7 +8156,7 @@
       "en": "Confirm Far Manager Editor/Viewer tab closing",
       "ru": "Подтверждение закрытия вкладки Far Manager Editor/Viewer",
       "zh": "确认Far Manager编辑器/视图标签页关闭",
-      "de": "Rückfrage beim Schließen des Far-Manager-Editors/-Betrachters",
+      "de": "Schließen von Reitern mit geöffnetem Far Manager Editor/Viewer bestätigen",
       "ja": "Far Manager の エディタ / ビューア タブを閉じる時に確認",
       "es": "Confirmar cierre de las pestañas de Editor/Visor de Far Manager",
       "pl": "Potwierdź zamknięcie karty edytora / przeglądarki Far Managera",
@@ -8119,7 +8167,7 @@
       "en": "Confirm window closing (cross click)",
       "ru": "Подтверждение закрытия окна (перекрестный клик)",
       "zh": "确认窗口关闭（点击叉号）",
-      "de": "Rückfrage beim Schließen von Fenstern (X anklicken)",
+      "de": "Schließen des Fensters bestätigen (Klick auf Schließen)",
       "ja": "ウィンドウを閉じる時に確認([x]クリック)",
       "es": "Confirmar cerrado de ventana (pulsar en X)",
       "pl": "Potwierdź zamknięcie okna (kliknięcie krzyżowe)",
@@ -8194,7 +8242,7 @@
       "en": "Add commands from history",
       "ru": "Добавить команды из истории",
       "zh": "添加历史命令",
-      "de": "Befehle aus Verlauf hinzufügen",
+      "de": "Befehle aus Verlauf",
       "ja": "履歴からコマンドを追加する",
       "es": "Añadir comandos desde historial",
       "pl": "Dodaj polecenia z historii",
@@ -8205,7 +8253,7 @@
       "en": "Add ConEmu Tasks",
       "ru": "Добавить Задачи (Tasks)",
       "zh": "添加 ConEmu 任务",
-      "de": "ConEmu-Aufgaben hinzufügen",
+      "de": "ConEmu-Aufgaben",
       "ja": "ConEmuタスクを追加する",
       "es": "Añadir tareas de ConEmu",
       "pl": "Dodaj zadania ConEmu",
@@ -8345,7 +8393,7 @@
     "cbCompressLongStrings": {
       "en": "Compress long strings to fit space",
       "ru": "Обрезать длинные строки",
-      "de": "Komprimiere lange Texte",
+      "de": "Verkürze lange Zeichenfolgen auf verfügbaren Platz",
       "ja": "スペースに合うように長い文字列を圧縮する",
       "es": "Comprimir textos largos para que entren",
       "pl": "Kompresuj długie znaki, aby dopasować przestrzeń",
@@ -8402,6 +8450,7 @@
       "ja": "コンソールの取り外しを確認する",
       "es": "Confirmar desanclar el terminal",
       "pl": "Potwierdź odłączenie konsoli",
+      "it_IT": "Conferma scollegamento console",
       "id": 2689 }
     ,
     "cbConfirmResetTerminal": {
@@ -8872,7 +8921,7 @@
       "en": "Enable automatic updates",
       "ru": "Включить авто-обновление",
       "zh": "启用自动更新",
-      "de": "Automatische Aktualisierungen aktivieren",
+      "de": "Automatisch nach neuer Version suchen",
       "ja": "自動更新を有効にする",
       "es": "Activar actualizaciones automáticas",
       "pl": "Włącz automatyczne aktualizacje",
@@ -9116,7 +9165,7 @@
       "en": "Auto size (fixed console size in cells)",
       "ru": "Масштабировать шрифт при ресайзе консоли",
       "zh": "自动设置大小（固定的控制台大小-以单元格为单位）",
-      "de": "Autogröße (feste Konsolengröße in Zeichen)",
+      "de": "Automatisch (feste Konsolengröße in Zellen)",
       "ja": "自動サイズ(セル内の固定コンソールサイズ)",
       "es": "Tamaño automático (tamaño de terminal en celdas)",
       "pl": "Rozmiar automat (naprawiono rozmiar w komórkach)",
@@ -9148,7 +9197,7 @@
       "en": "Hide tab && status bars",
       "ru": "Скрыть вкладку && строку состояния",
       "zh": "隐藏标签页 && 状态栏",
-      "de": "Verberge Reiter && Statusleisten",
+      "de": "Reiter- und Statusleiste ausblenden",
       "ja": "タブ&&ステータスバーを隠す",
       "es": "Ocultar pestaña && barra de estado",
       "pl": "Ukryj zakładki && paski stanu",
@@ -9158,7 +9207,7 @@
       "en": "Hide caption when maximized",
       "ru": "Скрыть заголовок при максимизации",
       "zh": "最大化时隐藏标题",
-      "de": "Verberge Titel wenn maximiert",
+      "de": "Titel ausblenden, wenn maximiert",
       "ja": "最大化時にキャプションを隠す",
       "es": "Ocultar título al maximizar",
       "pl": "Ukryj podpis po zmaksymalizowaniu",
@@ -9168,7 +9217,7 @@
       "en": "Hide caption always",
       "ru": "Всегда скрывать",
       "zh": "总是隐藏标题",
-      "de": "Titelleiste immer verstecken",
+      "de": "Titel immer ausblenden",
       "ja": "キャプションを常に隠す",
       "es": "Ocultar título siempre",
       "pl": "Zawsze ukryj podpis",
@@ -9315,7 +9364,7 @@
       "en": "Support special hotkeys",
       "ru": "Обрабатывать специальные клавиши",
       "_zh": "安装键盘hooks",
-      "de": "Besondere Tastenkürzel unterstützen",
+      "de": "Unterstützung für spezielle Tasten",
       "ja": "スペシャルホットキーをサポート",
       "es": "Soportar combinaciones epeciales",
       "pl": "Obsługa specjalnych skrótów klawiszowych",
@@ -9346,7 +9395,7 @@
     "cbJumpListAutoUpdate": {
       "en": "Autoupdate",
       "ru": "Сразу",
-      "de": "Autoaktualisierung",
+      "de": "Auto-Update",
       "ja": "自動更新",
       "es": "Autoactualizar",
       "pl": "Auto Update",
@@ -9406,7 +9455,7 @@
       "en": "Minimize on focus lose (not in Quake style)",
       "ru": "Сворачивать при потере фокуса (not in Quake style)",
       "zh": "失去焦点时最小化（不使用Quake方式）",
-      "de": "Bei Fokusverlust minimieren (nicht im Quake-Modus)",
+      "de": "Minimieren, wenn Fenster den Fokus verliert (nicht im Quake-Modus)",
       "ja": "フォーカスを最小限に抑える(Quakeスタイルではない)",
       "es": "Minimizar al perder foco (no en modo Quake)",
       "pl": "Minimalizuj utratę ostrości (nie w stylu Quake'a)",
@@ -9477,7 +9526,7 @@
       "en": "Show buttons (toolbar) in tab bar",
       "ru": "Показывать кнопки на панели вкладок",
       "zh": "在标签栏显示按钮（工具栏）",
-      "de": "Zeige Schaltflächen (Werkzeugleiste) in der Reiterleiste",
+      "de": "(Werkzeug-)Schaltflächen in Reiterleiste anzeigen",
       "ja": "タブバーにボタン (ツールバー) を表示する",
       "es": "Mostrar botones en barra de pestañas",
       "pl": "Pokaż przyciski (pasek narzędzi) na pasku kart",
@@ -9487,7 +9536,7 @@
       "en": "Show search field in tab bar",
       "ru": "Показывать поиск на панели вкладок",
       "zh": "在标签页栏显示搜索栏",
-      "de": "Zeige Suchfeld in der Reiterleiste",
+      "de": "Suchfeld in Reiterleiste anzeigen",
       "ja": "タブバーに検索フィールドを表示する",
       "es": "Mostrar campo de búsqueda en barra de pestañas                                                                                                                                                                                                                                                               ",
       "pl": "Pokaż pole wyszukiwania na pasku kart",
@@ -9507,7 +9556,7 @@
       "en": "Always show numbers [n/m]",
       "ru": "Всегда показывать [Active/Total]",
       "zh": "总是显示数字 [n/m]",
-      "de": "Nummern immer anzeigen [n/m]",
+      "de": "Konsolennummer in Titel anzeigen [n/m]",
       "ja": "常に数字を表示する[n/m]",
       "es": "Mostrar siempre números [n/m]",
       "pl": "Zawsze pokazuj liczby [n / m]",
@@ -9548,7 +9597,7 @@
       "en": "ANSI and xterm sequences",
       "ru": "Последовательности ANSI и xterm",
       "_zh": "ANSI X3.64 / xterm 256 色",
-      "de": "ANSI- und xterm-Sequenzen",
+      "de": "ANSI- und XTERM-Sequenzen",
       "ja": "ANSIおよびxtermシーケンス",
       "es": "Secuencias ANSI y xterm",
       "pl": "Sekwencje ANSI i xterm",
@@ -9599,7 +9648,7 @@
       "en": "Quake-style slide down from the top of the screen",
       "ru": "Включить Quake-режим выезжания окна сверху экрана",
       "zh": "从屏幕顶部Quake式向下滑动",
-      "de": "Quake-artiges Herein-/Herausgleiten von der Bildschirmoberkante",
+      "de": "Konsole vom oberen Bildschirmrand ein-/ausblenden (Quake-Modus)",
       "ja": "スクリーン上部から Quakeスタイルでスライド",
       "es": "Modo-Quake: mostrar desde la parte superior de la pantalla",
       "pl": "Zsuń się w stylu quake'a z góry ekranu",
@@ -9610,7 +9659,7 @@
       "en": "Quake style slide down",
       "ru": "Стиль Quake опускается вниз",
       "zh": "Quake式向下滑动",
-      "de": "Quake-artiges Hereingleiten",
+      "de": "Einblenden im Quake-Modus",
       "ja": "Quakeスタイル スライドダウン",
       "es": "Modo-Quake",
       "pl": "Styl Quake zjeżdża w dół",
@@ -9631,7 +9680,7 @@
       "en": "Restore to active monitor",
       "ru": "Восстановить на активный монитор",
       "zh": "恢复至活动的显示屏",
-      "de": "Aus aktiven Monitor wiederherstellen",
+      "de": "Auf aktivem Monitor wiederherstellen",
       "ja": "アクティブなモニターに復元する",
       "es": "Restaurar al monitor activo",
       "pl": "Przywróć do aktywnego monitora",
@@ -9640,7 +9689,7 @@
     "cbRestoreInactive": {
       "en": "Restore inactive window by hotkey",
       "ru": "Восстановить неактивное окно горячей клавишей",
-      "de": "Inaktives Fenster mit Tastenkombination wiederherstellen",
+      "de": "Fenster mit Tastenkombination wiederherstellen",
       "ja": "ホットキーで非アクティブウィンドウを復元する",
       "es": "Restaurar ventana inactiva por teclado",
       "pl": "Przywróć nieaktywne okno za pomocą skrótu",
@@ -9810,7 +9859,7 @@
       "en": "Show balloon help tooltips",
       "ru": "Всплывающие подсказки",
       "zh": "显示气球帮助提示",
-      "de": "Zeige Sprechblasen mit Kurzinformationen",
+      "de": "Sprechblasen mit Hinweisen anzeigen",
       "ja": "バルーンヘルプツールチップを表示する",
       "es": "Mostrar bocadillos de ayuda",
       "pl": "Pokaż etykietki pomocy w dymkach",
@@ -9853,7 +9902,7 @@
       "en": "Single instance mode (use existing window instead of running new instance)",
       "ru": "Режим одного экземпляра (всегда запускать новые консоли в запущенном окне)",
       "zh": "单实例模式（使用现有窗口而不是运行新实例）",
-      "de": "Einzelinstanzmodus (verwendet vorhandene Fenster, anstatt neue Instanzen zu starten)",
+      "de": "Nur eine Instanz (verwendet vorhandene Fenster, anstatt neue zu öffnen)",
       "ja": "シングルインスタンスモード (新しいインスタンスを実行する代わりに既存のウィンドウを使用)",
       "es": "Instancia única (usar la ventana existente en vez de crear una nueva instancia)",
       "pl": "Tryb pojedynczego wystąpienia (użyj istniejącego okna zamiast uruchamiania nowego wystąpienia)",
@@ -9904,7 +9953,7 @@
       "en": "Snap to desktop edges",
       "ru": "Привязка к краям рабочего стола",
       "zh": "快闪至桌面边缘",
-      "de": "An Desktop-Kanten fangen",
+      "de": "Am Desktoprand fangen",
       "ja": "デスクトップの端にスナップ",
       "es": "Anclar a bordes del escritorio",
       "pl": "Przyciągaj do krawędzi pulpitu",
@@ -10156,7 +10205,7 @@
       "en": "Center console in ConEmu workspace",
       "ru": "Центрировать консоль в рабочей области ConEmu",
       "zh": "使控制台位于ConEmu工作空间中心",
-      "de": "Zentriere Konsole im ConEmu-Arbeitsbereich",
+      "de": "Konsole in Arbeitsbereich zentrieren",
       "ja": "ConEmuワークスペースのセンターコンソール",
       "es": "Centrar terminal en el área de ConEmu",
       "pl": "ConEmu w obszarze roboczym konsoli środkowej",
@@ -10177,7 +10226,7 @@
       "en": "Apply && Check",
       "ru": "Применить && Проверить",
       "zh": "确认并保存",
-      "de": "Anwenden && Prüfen",
+      "de": "Übernehmen && Prüfen",
       "ja": "適用 && 確認",
       "es": "Aplicar && Comprobar",
       "pl": "Zastosuj && sprawdź",
@@ -10198,7 +10247,7 @@
       "en": "Startup",
       "ru": "При запуске",
       "zh": "启动时",
-      "de": "Systemstart",
+      "de": "Beim Start",
       "ja": "起動",
       "es": "Inicio",
       "pl": "PrzyStarcie",
@@ -10209,7 +10258,7 @@
       "en": "TSA notification only",
       "ru": "Только уведомления TSA",
       "zh": "仅在任务栏状态区域通知",
-      "de": "Nur im Infobereich benachrichtigen",
+      "de": "Nur benachrichtigen",
       "ja": "TSA通知のみ",
       "es": "Sólo zona notificación",
       "pl": "Tylko powiadomienie TSA",
@@ -10220,7 +10269,7 @@
       "en": "External downloader",
       "ru": "Внешний загрузчик",
       "zh": "外部下载器",
-      "de": "Externer Downloader",
+      "de": "Programm für Download",
       "ja": "外部ダウンローダ",
       "es": "Descargar externamente",
       "pl": "Zewnętrzny downloader",
@@ -10274,7 +10323,7 @@
       "en": "Show && store current window size and position",
       "ru": "Показать && сохранить текущий размер и положение окна",
       "zh": "显示 && 储存当前窗口的大小和位置",
-      "de": "Zeige && Speichere aktuelle Fenstergröße und -position",
+      "de": "Aktuelle Größe und Position speichern",
       "ja": "カレントウィンドウのサイズと位置を保存して表示する",
       "es": "Mostrar && almacenar la posición y tamaño de la ventana",
       "pl": "Pokaż i przechowuj bieżący rozmiar i pozycję okna",
@@ -10295,7 +10344,7 @@
       "en": "Support special hotkeys (Win+Number, Win+Tab, PrntScrn and so on)",
       "ru": "Обрабатывать специальные клавиши (Win+Number, Win+Tab, PrntScrn и т.п.)",
       "_zh": "安装键盘hooks （被Win+Number, Win+Tab, PrntScrn等等所需要）",
-      "de": "Unterstütze spezielle Tastenkürzel (Win+Zahl, Win+Tab, Druck, usw.)",
+      "de": "Unterstützung für spezielle Tasten (Win+Ziffer, Win+Tab, Drucken usw.)",
       "ja": "スペシャルホットキーのサポート (Win+Num, Win+Tab, PrntScrn など)",
       "es": "Soporte de combinaciones especiales (Win+Número, Win+Tab, ImprPant, ...)",
       "pl": "Obsługa specjalnych skrótów klawiszowych (Win + Number, Win + Tab, PrntScrn i tak dalej)",
@@ -10511,7 +10560,7 @@
       "en": "Close confirmations",
       "ru": "Подтверждение закрытия",
       "zh": "关闭确认",
-      "de": "Rückfragen beim Schließen",
+      "de": "Schließen bestätigen",
       "ja": "確認を閉じる",
       "es": "Confirmación de cerrado",
       "pl": "Zamknij potwierdzenia",
@@ -10563,7 +10612,7 @@
       "en": "Hotkeys processing",
       "ru": "Обработка горячих клавиш",
       "_zh": "拦截按键",
-      "de": "Tastenkürzel werden verarbeitet",
+      "de": "Tastenkürzel verarbeiten",
       "ja": "ホットキー処理",
       "es": "Procesado de combinaciones de teclas",
       "pl": "Przetwarzanie skrótów klawiszowych",
@@ -10636,7 +10685,7 @@
       "en": "Confirm close (Press Enter or Esc to close console)",
       "ru": "Подтверждение закрытия (нажмите Enter или Esc, чтобы закрыть консоль)",
       "zh": "确认关闭（按下回车键或ESC键关闭控制台）",
-      "de": "Rückfrage beim Schließen (Enter oder Esc drücken um Konsole zu schließen)",
+      "de": "Schließen bestätigen (Drücken Sie Enter oder ESC, um die Konsole zu schließen)",
       "ja": "閉じるを確認する(EnterまたはEscを押してコンソールを閉じる)",
       "es": "Confirmar cierre (pulsar Enter o Esca para cerrar terminal)",
       "pl": "Potwierdź zamknięcie (naciśnij Enter lub Esc, aby zamknąć konsolę)",
@@ -10747,7 +10796,7 @@
       "en": "Title bar (Caption) and border options",
       "ru": "Панель заголовка (заголовок) и параметры рамки",
       "zh": "标题栏（标题）和边框选项",
-      "de": "Titelleisten- und Ränder-Einstellungen",
+      "de": "Titelleisten- und Randeinstellungen",
       "ja": "タイトルバー (キャプション) と境界オプション",
       "es": "Opciones de barra de título y borde",
       "pl": "Pasek tytułu (podpis) i opcje obramowania",
@@ -10827,7 +10876,7 @@
       "en": "Hotkeys, modifiers, macros",
       "ru": "Горячие клавиши, модификаторы, макросы",
       "zh": "热键，修改器，宏",
-      "de": "Tastenkürzel, Modifizierer, Makros",
+      "de": "Tastenkürzel, Modi, Makros",
       "ja": "ホットキー, モデファイヤ, マクロ",
       "es": "Combinaciones, modificadores, macros",
       "pl": "Skróty klawiszowe, modyfikatory, makra",
@@ -11064,7 +11113,7 @@
       "en": "Select text with keyboard (Also there are two hotkeys on Keys&Macro page)",
       "ru": "Выделите текст с помощью клавиатуры (также есть две горячие клавиши на странице ‘Клавиши и макро’)",
       "zh": "使用键盘选择文本（Keys&Macro页面也有两个热键）",
-      "de": "Text mit der Tastatur auswählen (Es gibt auch zwei Tastenkürzel auf der Tasten&Makros-Seite)",
+      "de": "Text per Tastatur auswählen (Es gibt auch zwei Tastenkürzel auf der Seite \"Tasten&Makros\")",
       "ja": "キーボードでテキストを選択 (Keys&Macro ページには2つのホットキーもあります)",
       "es": "Seleccionar texto con teclado (hay dos combinaciones en la página Teclas y Macro)",
       "pl": "Zaznacz tekst za pomocą klawiatury (na stronie Klawisze i makra są też dwa klawisze skrótu)",
@@ -11238,7 +11287,7 @@
       "en": "Update settings",
       "ru": "Настройки обновления",
       "zh": "更新设置",
-      "de": "Aktualisierungseinstellungen",
+      "de": "Einstellungen für Aktualisierung",
       "ja": "設定を更新",
       "es": "Opciones de actualización",
       "pl": "Ustawienia aktualizacji",
@@ -11282,7 +11331,7 @@
       "en": "Window size (cells, pixels or percents)",
       "ru": "Размер окна (cells, pixels or percents)",
       "zh": "窗口大小（单元格，像素或百分比）",
-      "de": "Fenstergröße (Zeichen, Pixel oder Prozent)",
+      "de": "Fenstergröße (Zellen, Pixel oder Prozen)",
       "ja": "ウィンドウサイズ(セル,ピクセルまたはパーセント)",
       "es": "Tamaño de ventana (celdas, pixels o porcentual)",
       "pl": "Rozmiar okna (komórki, piksele lub procenty)",
@@ -11612,7 +11661,7 @@
       "en": "‘Alpha’ builds",
       "ru": "‘Альфа’ сборка",
       "zh": "‘开发版’",
-      "de": "'Alpha'-Versionen",
+      "de": "'Alpha'",
       "ja": " ' Alpha ' ビルド",
       "es": "Builds 'alfa'",
       "pl": "Aplha \"testowa\"",
@@ -11809,7 +11858,7 @@
       "en": "If all consoles closed",
       "ru": "Без открытых консолей",
       "zh": "如果所有窗口关闭",
-      "de": "Wenn alle Konsolen geschlossen",
+      "de": "Wenn keine Konsole offen",
       "ja": "すべてのコンソールが閉じた場合",
       "es": "Si todos los terminales cerrados",
       "pl": "Jeśli konsole są zamknięte",
@@ -12183,7 +12232,7 @@
       "en": "Latest",
       "ru": "Последний",
       "zh": "最新",
-      "de": "Neustes",
+      "de": "Neueste",
       "ja": "最新",
       "es": "Último",
       "pl": "Alpha \"testowa\"",
@@ -12216,7 +12265,7 @@
       "en": "7-Zip archive (ConEmu.7z), WinRar or 7-Zip required",
       "ru": "7-Zip архив (ConEmu.7z), WinRar или 7-Zip требуется",
       "zh": "7-Zip 压缩档（ConEmu.7z），需要 WinRar 或 7-Zip 解压",
-      "de": "7-Zip-Archive (ConEmu.7z), WinRar oder 7-Zip benötigt",
+      "de": "7-Zip-Archiv (ConEmu.7z), erfordert WinRAR oder 7-Zip",
       "ja": "7-Zipアーカイブ(ConEmu.7z),WinRarまたは7-Zipが必要",
       "es": "Se requiere archivo 7-Zip (ConEmu.7z), WinRar o 7-Zip",
       "pl": "Wymagane archiwum 7-Zip (ConEmu.7z), WinRar lub 7-Zip",
@@ -12227,7 +12276,7 @@
       "en": "Installer (ConEmuSetup.exe /p:%s)",
       "ru": "Установщик (ConEmuSetup.exe /p:%s)",
       "zh": "安装程序（ConEmuSetup.exe /p:%s）",
-      "de": "Installationsassistent (ConEmuSetup.exe /p:%s)",
+      "de": "Installationsprogramm (ConEmuSetup.exe /p:%s)",
       "ja": "インストーラ(ConEmuSetup.exe /p:%s)",
       "es": "Instalador (ConEmuSetup.exe /p:%s)",
       "pl": "Zainstalować (ConEmuSetup.exe /p:%s)",
@@ -12804,7 +12853,7 @@
       "ru": "Слева x Сверху:",
       "zh": "左 x 高：",
       "pl": "Lewa x Góra:",
-      "it_IT": "Sinistra x Alto",
+      "it_IT": "Sinistra x Alto:",
       "id": 2946 }
     ,
     "stConsoleSizeChars": {
@@ -13144,7 +13193,7 @@
       "en": "Cell:",
       "ru": "Ячейка:",
       "zh": "单元：",
-      "de": "Zeichen:",
+      "de": "Zellen:",
       "ja": "セル:",
       "es": "Celda:",
       "pl": "Komórka: -Cell:-",
@@ -13679,7 +13728,7 @@
       "en": "Choose your startup task or even a shell with arguments:",
       "ru": "Запускать при старте ConEmu (Задача или команда):",
       "zh": "选择你的启动任务或者带参数的 shell:",
-      "de": "Startaufgabe, oder auch Shell mit Argumenten, auswählen:",
+      "de": "Wählen Sie eine Aufgabe oder eine Shell mit Parametern für den Start:",
       "ja": "あなたのスタートアップタスク あるいは引数のついたシェルを選んでください:",
       "es": "Selecciona la tarea de inicio o un intérprete de comandos con opciones:",
       "pl": "Wybierz zadanie uruchamiania lub nawet powłokę z argumentami:",
@@ -13689,6 +13738,7 @@
       "en": "Choose your startup task:",
       "ru": "Выбрать задачу запуска",
       "zh": "选择你的启动任务：",
+      "de": "Wählen Sie, welche Aufgabe beim Start ausgeführt wird:",
       "pl": "Wybierz zadanie startowe:",
       "it_IT": "Scegli l'attività di avvio:",
       "id": 3110 }
@@ -14118,7 +14168,7 @@
       "en": "Update command (%1 - package, %2 - ConEmu.exe folder, %3 - x86/x64, %4 - PID)",
       "ru": "Команда обновления (%1 - пакет, %2 - папка с ConEmu.exe, %3 - x86/x64, %4 - PID)",
       "zh": "更新命令 (%1 - package, %2 - ConEmu.exe folder, %3 - x86/x64, %4 - PID)",
-      "de": "Aktualisierungsbefehl (%1 - Paket, %2 - ConEmu.exe-Ordner, %3 - x86/x64, %4 - PID)",
+      "de": "Befehl bei Aktualisierung (%1 - Paket, %2 - ConEmu-Ordner, %3 - x86/x64. %4 - PID)",
       "ja": "アップデートコマンド(%1 - パッケージ, %2 - ConEmu.exeフォルダ, %3 - x86/x64, %4 - PID)",
       "es": "Comando de actualización (%1 - paquete, %2 - carpeta de ConEmu.exe, %3 - x86/x64, %4 - PID)",
       "pl": "Zaktualizuj polecenie (%1 - package, %2 - ConEmu.exe folder, %3 - x86/x64, %4 - PID)",
@@ -14128,7 +14178,7 @@
       "en": "Post-update command, don't forget ‘call’ for batches",
       "ru": "Выполнить после обновления, не забудьте «call» для вызова bat/cmd файлов",
       "zh": "更新后命令，不要忘记从批处理“调用”",
-      "de": "Befehl nach Aktualisierung, für Batch 'call' nicht vergessen",
+      "de": "Befehl nach Aktualisierung; \"call\" bei Batch-Dateien nicht vergessen",
       "ja": "更新後のコマンド,バッチの 'call' を忘れないでください",
       "es": "Comando post-actualización, no olvides 'invocar' los procesos batch",
       "pl": "Polecenie po aktualizacji, nie zapomnij \"zadzwoń\" w przypadku partii",
@@ -14160,7 +14210,7 @@
       "en": "User",
       "ru": "Логин",
       "zh": "账号",
-      "de": "Benutzername",
+      "de": "Benutzer",
       "ja": "ユーザー",
       "es": "Usuario",
       "pl": "Użytkownik",
@@ -14171,7 +14221,7 @@
       "en": "Preferred release type",
       "ru": "Проверять релизы",
       "zh": "最喜爱的版本类型",
-      "de": "Bevorzugter Veröffentlichungstyp",
+      "de": "Bevorzugte Version",
       "ja": "好ましいリリースタイプ",
       "es": "Tipo de versión",
       "pl": "Preferowany typ wydania",
@@ -14181,7 +14231,7 @@
       "en": "ConEmu latest version location info",
       "ru": "URL информации о последних версия",
       "zh": "ConEmu 版本更新来源",
-      "de": "Adresse mit Info über die neuste ConEmu-Version",
+      "de": "Adresse zu Versionsinformationen",
       "ja": "ConEmu最新バージョンの位置情報",
       "es": "Información sobre localización de última versión de ConEmu",
       "pl": "Informacje o lokalizacji najnowszej wersji ConEmu",

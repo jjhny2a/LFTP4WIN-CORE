@@ -1,6 +1,6 @@
  ConEmuLn
 
- Timestamp is 6013385d (Thu Jan 28 23:19:09 2021)
+ Timestamp is 601f4ea0 (Sun Feb  7 03:21:20 2021)
 
  Preferred load address is 10000000
 
@@ -44,14 +44,14 @@
 
   Address         Publics by Value              Rva+Base       Lib:Object
 
- 0000:00000000       ___dynamic_value_reloc_table 00000000     <absolute>
+ 0000:00000000       ___guard_longjmp_table     00000000     <absolute>
+ 0000:00000000       ___guard_longjmp_count     00000000     <absolute>
  0000:00000000       ___guard_iat_count         00000000     <absolute>
  0000:00000000       __except_list              00000000     <absolute>
  0000:00000000       ___guard_fids_count        00000000     <absolute>
- 0000:00000000       ___guard_longjmp_table     00000000     <absolute>
  0000:00000000       ___hybrid_code_map_count   00000000     <absolute>
  0000:00000000       ___hybrid_auxiliary_iat    00000000     <absolute>
- 0000:00000000       ___guard_longjmp_count     00000000     <absolute>
+ 0000:00000000       ___dynamic_value_reloc_table 00000000     <absolute>
  0000:00000000       ___guard_fids_table        00000000     <absolute>
  0000:00000000       ___volatile_metadata       00000000     <absolute>
  0000:00000000       ___guard_iat_table         00000000     <absolute>
@@ -211,16 +211,16 @@
  0001:0000607c       ___DestructExceptionObject 1000707c f   libvcruntime:ehhelpers.obj
  0001:0000611c       ?_CallMemberFunction0@@YGXQAX0@Z 1000711c f i libvcruntime:ehhelpers.obj
  0001:00006129       ??$is_overflow_condition@K@__crt_strtox@@YA_NIK@Z 10007129 f i libucrt:strtox.obj
- 0001:0000615c       ??$make_c_string_character_source@DPAPAD@__crt_strtox@@YA?AV?$c_string_character_source@D@0@QBDQAPAD@Z 1000715c f i libucrt:strtox.obj
  0001:0000615c       ??$make_c_string_character_source@_WPAPA_W@__crt_strtox@@YA?AV?$c_string_character_source@_W@0@QB_WQAPA_W@Z 1000715c f i libucrt:strtox.obj
+ 0001:0000615c       ??$make_c_string_character_source@DPAPAD@__crt_strtox@@YA?AV?$c_string_character_source@D@0@QBDQAPAD@Z 1000715c f i libucrt:strtox.obj
  0001:00006177       ??$parse_integer@KV?$c_string_character_source@D@__crt_strtox@@@__crt_strtox@@YAKQAU__crt_locale_pointers@@V?$c_string_character_source@D@0@H_N@Z 10007177 f i libucrt:strtox.obj
  0001:0000639f       ??$parse_integer@KV?$c_string_character_source@_W@__crt_strtox@@@__crt_strtox@@YAKQAU__crt_locale_pointers@@V?$c_string_character_source@_W@0@H_N@Z 1000739f f i libucrt:strtox.obj
  0001:00006a84       ??0_LocaleUpdate@@QAE@QAU__crt_locale_pointers@@@Z 10007a84 f i libucrt:strtox.obj
  0001:00006b07       ?unget@?$c_string_character_source@D@__crt_strtox@@QAEXD@Z 10007b07 f i libucrt:strtox.obj
  0001:00006b2f       ?unget@?$c_string_character_source@_W@__crt_strtox@@QAEX_W@Z 10007b2f f i libucrt:strtox.obj
- 0001:00006b5b       ?validate@?$c_string_character_source@D@__crt_strtox@@QBE_NXZ 10007b5b f i libucrt:strtox.obj
  0001:00006b5b       ?validate@?$string_output_adapter@_W@__crt_stdio_output@@QBE_NXZ 10007b5b f i libucrt:output.obj
  0001:00006b5b       ?validate@?$c_string_character_source@_W@__crt_strtox@@QBE_NXZ 10007b5b f i libucrt:strtox.obj
+ 0001:00006b5b       ?validate@?$c_string_character_source@D@__crt_strtox@@QBE_NXZ 10007b5b f i libucrt:strtox.obj
  0001:00006b76       __chvalidchk_l             10007b76 f i libucrt:strtox.obj
  0001:00006ba0       __ischartype_l             10007ba0 f i libucrt:strtox.obj
  0001:00006bd3       _strtoul                   10007bd3 f   libucrt:strtox.obj
@@ -266,11 +266,11 @@
  0001:00007ef6       ___stdio_common_vswprintf  10008ef6 f   libucrt:output.obj
  0001:00007f1a       _wcsncmp                   10008f1a f   libucrt:wcsncmp.obj
  0001:00007f54       ?initialize@?$dual_state_global@P6AXH@Z@__crt_state_management@@QAEXQ6AXH@Z@Z 10008f54 f i libucrt:signal.obj
- 0001:00007f54       ?initialize@?$dual_state_global@P6AHPAU_exception@@@Z@__crt_state_management@@QAEXQ6AHPAU_exception@@@Z@Z 10008f54 f i libucrt:matherr.obj
- 0001:00007f54       ?initialize@?$dual_state_global@P6AXPB_W00II@Z@__crt_state_management@@QAEXQ6AXPB_W00II@Z@Z 10008f54 f i libucrt:invalid_parameter.obj
- 0001:00007f54       ?initialize@?$dual_state_global@PAU__crt_locale_data@@@__crt_state_management@@QAEXQAU__crt_locale_data@@@Z 10008f54 f i libucrt:initialization.obj
  0001:00007f54       ?initialize@?$dual_state_global@PAPAD@__crt_state_management@@QAEXQAPAD@Z 10008f54 f i libucrt:environment_initialization.obj
+ 0001:00007f54       ?initialize@?$dual_state_global@PAU__crt_locale_data@@@__crt_state_management@@QAEXQAU__crt_locale_data@@@Z 10008f54 f i libucrt:initialization.obj
+ 0001:00007f54       ?initialize@?$dual_state_global@P6AHPAU_exception@@@Z@__crt_state_management@@QAEXQ6AHPAU_exception@@@Z@Z 10008f54 f i libucrt:matherr.obj
  0001:00007f54       ?initialize@?$dual_state_global@P6AHI@Z@__crt_state_management@@QAEXQ6AHI@Z@Z 10008f54 f i libucrt:new_handler.obj
+ 0001:00007f54       ?initialize@?$dual_state_global@P6AXPB_W00II@Z@__crt_state_management@@QAEXQ6AXPB_W00II@Z@Z 10008f54 f i libucrt:invalid_parameter.obj
  0001:00007f85       ___acrt_call_reportfault   10008f85 f   libucrt:invalid_parameter.obj
  0001:000080c0       ___acrt_initialize_invalid_parameter_handler 100090c0 f   libucrt:invalid_parameter.obj
  0001:000080d4       __invalid_parameter        100090d4 f   libucrt:invalid_parameter.obj

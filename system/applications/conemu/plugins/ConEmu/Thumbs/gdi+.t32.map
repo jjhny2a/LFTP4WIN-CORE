@@ -1,6 +1,6 @@
  gdi+
 
- Timestamp is 60133855 (Thu Jan 28 23:19:01 2021)
+ Timestamp is 601f4e98 (Sun Feb  7 03:21:12 2021)
 
  Preferred load address is 10000000
 
@@ -78,8 +78,8 @@
  0001:000010b8       ?OpenBitmapFromFile@GDIPlusImage@@QAEPAVGpImage@Gdiplus@@PB_WU_COORD@@@Z 100020b8 f i gdip.obj
  0001:000010fe       ?SelectPage@GDIPlusImage@@QAE_NI@Z 100020fe f i gdip.obj
  0001:0000119f       ??2@YAPAXI@Z               1000219f f   common-kernel32:Memory.obj
- 0001:000011c0       ??_V@YAXPAX@Z              100021c0 f   common-kernel32:Memory.obj
  0001:000011c0       ??3@YAXPAX@Z               100021c0 f   common-kernel32:Memory.obj
+ 0001:000011c0       ??_V@YAXPAX@Z              100021c0 f   common-kernel32:Memory.obj
  0001:000011c5       ??_U@YAPAXI@Z              100021c5 f   common-kernel32:Memory.obj
  0001:000011ce       ?HeapDeinitialize@@YAXXZ   100021ce f   common-kernel32:Memory.obj
  0001:00001224       ?HeapInitialize@@YA_NXZ    10002224 f   common-kernel32:Memory.obj
@@ -176,8 +176,8 @@
  0001:0000389a       __abnormal_termination     1000489a f   libvcruntime:exsup.obj
  0001:000038c0       __NLG_Notify1              100048c0 f   libvcruntime:exsup.obj
  0001:000038cc       __NLG_Notify               100048cc f   libvcruntime:exsup.obj
- 0001:000038e3       __NLG_Dispatch             100048e3     libvcruntime:exsup.obj
  0001:000038e3       __NLG_Dispatch2            100048e3     libvcruntime:exsup.obj
+ 0001:000038e3       __NLG_Dispatch             100048e3     libvcruntime:exsup.obj
  0001:000038eb       __NLG_Call                 100048eb f   libvcruntime:exsup.obj
  0001:000038ed       __NLG_Return2              100048ed     libvcruntime:exsup.obj
  0001:000038f0       _memcpy                    100048f0 f   libvcruntime:memcpy.obj
@@ -220,19 +220,19 @@
  0001:00005019       ?type_case_o@?$output_processor@DV?$string_output_adapter@D@__crt_stdio_output@@V?$standard_base@DV?$string_output_adapter@D@__crt_stdio_output@@@2@@__crt_stdio_output@@AAE_NXZ 10006019 f i libucrt:output.obj
  0001:00005038       ?type_case_p@?$output_processor@DV?$string_output_adapter@D@__crt_stdio_output@@V?$standard_base@DV?$string_output_adapter@D@__crt_stdio_output@@@2@@__crt_stdio_output@@AAE_NXZ 10006038 f i libucrt:output.obj
  0001:00005050       ?type_case_s@?$output_processor@DV?$string_output_adapter@D@__crt_stdio_output@@V?$standard_base@DV?$string_output_adapter@D@__crt_stdio_output@@@2@@__crt_stdio_output@@AAE_NXZ 10006050 f i libucrt:output.obj
- 0001:000050c3       ?validate@?$c_string_character_source@D@__crt_strtox@@QBE_NXZ 100060c3 f i libucrt:atox.obj
  0001:000050c3       ?validate@?$string_output_adapter@D@__crt_stdio_output@@QBE_NXZ 100060c3 f i libucrt:output.obj
+ 0001:000050c3       ?validate@?$c_string_character_source@D@__crt_strtox@@QBE_NXZ 100060c3 f i libucrt:atox.obj
  0001:000050de       ?write_character@?$string_output_adapter@D@__crt_stdio_output@@QBE_NDQAH@Z 100060de f i libucrt:output.obj
  0001:00005120       ?write_stored_string_tchar@?$output_processor@DV?$string_output_adapter@D@__crt_stdio_output@@V?$standard_base@DV?$string_output_adapter@D@__crt_stdio_output@@@2@@__crt_stdio_output@@AAE_ND@Z 10006120 f i libucrt:output.obj
  0001:000051c7       ?write_string@?$string_output_adapter@D@__crt_stdio_output@@QBEXQBDHQAH1@Z 100061c7 f i libucrt:output.obj
  0001:0000525a       ___stdio_common_vsprintf   1000625a f   libucrt:output.obj
  0001:0000527e       _wcsncmp                   1000627e f   libucrt:wcsncmp.obj
- 0001:000052b8       ?initialize@?$dual_state_global@PAPAD@__crt_state_management@@QAEXQAPAD@Z 100062b8 f i libucrt:environment_initialization.obj
- 0001:000052b8       ?initialize@?$dual_state_global@P6AHPAU_exception@@@Z@__crt_state_management@@QAEXQ6AHPAU_exception@@@Z@Z 100062b8 f i libucrt:matherr.obj
- 0001:000052b8       ?initialize@?$dual_state_global@P6AXH@Z@__crt_state_management@@QAEXQ6AXH@Z@Z 100062b8 f i libucrt:signal.obj
  0001:000052b8       ?initialize@?$dual_state_global@PAU__crt_locale_data@@@__crt_state_management@@QAEXQAU__crt_locale_data@@@Z 100062b8 f i libucrt:initialization.obj
- 0001:000052b8       ?initialize@?$dual_state_global@P6AXPB_W00II@Z@__crt_state_management@@QAEXQ6AXPB_W00II@Z@Z 100062b8 f i libucrt:invalid_parameter.obj
+ 0001:000052b8       ?initialize@?$dual_state_global@P6AHPAU_exception@@@Z@__crt_state_management@@QAEXQ6AHPAU_exception@@@Z@Z 100062b8 f i libucrt:matherr.obj
  0001:000052b8       ?initialize@?$dual_state_global@P6AHI@Z@__crt_state_management@@QAEXQ6AHI@Z@Z 100062b8 f i libucrt:new_handler.obj
+ 0001:000052b8       ?initialize@?$dual_state_global@P6AXPB_W00II@Z@__crt_state_management@@QAEXQ6AXPB_W00II@Z@Z 100062b8 f i libucrt:invalid_parameter.obj
+ 0001:000052b8       ?initialize@?$dual_state_global@PAPAD@__crt_state_management@@QAEXQAPAD@Z 100062b8 f i libucrt:environment_initialization.obj
+ 0001:000052b8       ?initialize@?$dual_state_global@P6AXH@Z@__crt_state_management@@QAEXQ6AXH@Z@Z 100062b8 f i libucrt:signal.obj
  0001:000052e9       ___acrt_call_reportfault   100062e9 f   libucrt:invalid_parameter.obj
  0001:00005424       ___acrt_initialize_invalid_parameter_handler 10006424 f   libucrt:invalid_parameter.obj
  0001:00005438       __invalid_parameter        10006438 f   libucrt:invalid_parameter.obj
@@ -519,8 +519,8 @@
  0001:0000fe69       __ftol2_pentium4           10010e69 f   LIBCMT:ftol2.obj
  0001:0000fe7c       __ftol2_sse_excpt          10010e7c f   LIBCMT:ftol2.obj
  0001:0000fea0       __ftol2                    10010ea0 f   LIBCMT:ftol2.obj
- 0001:0000ff20       __chkstk                   10010f20 f   LIBCMT:chkstk.obj
  0001:0000ff20       __alloca_probe             10010f20 f   LIBCMT:chkstk.obj
+ 0001:0000ff20       __chkstk                   10010f20 f   LIBCMT:chkstk.obj
  0002:00000000       __imp__SelectObject@8      10011000     gdi32:GDI32.dll
  0002:00000004       __imp__DeleteObject@4      10011004     gdi32:GDI32.dll
  0002:00000008       __imp__DeleteDC@4          10011008     gdi32:GDI32.dll
